@@ -5,13 +5,13 @@ image: https://live.staticflickr.com/4592/25165180248_5f130dba76_k.jpg
 layout: post
 subtitle: Smart & embedded solutions using IoT
 title: Biothecnology
+description: 
 ---
 
-# Clean White Theme for Hugo
+# 
 
 
 
-## Screenshots
 
 **Home**
 ![screenshot](/img/fullscreenshot.png)
