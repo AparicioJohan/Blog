@@ -3,9 +3,10 @@
 ---
 
 
+# Team 
 
 <center>
-<img src="/img/test.jpg" alt="" width="200px" height="20px"/>
+![team](/img/team3.jpg )
 </center>
 
 ## Hello World!

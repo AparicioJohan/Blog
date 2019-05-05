@@ -5,20 +5,18 @@ image: https://live.staticflickr.com/4592/25165180248_5f130dba76_k.jpg
 layout: post
 subtitle: Smart & embedded solutions using IoT
 title: Biothecnology
-description: 
+description: Thecnology
+showtoc: false
 ---
 
-# 
+
+# Team
 
 
+## Final
 
 
 **Home**
-![screenshot](/img/fullscreenshot.png)
-
-**Post**
-![screenshot](/img/post.png)
-
-**Search**
+![screenshot](/img/frijol.jpg)
 
 
