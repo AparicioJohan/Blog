@@ -6,84 +6,105 @@
 # Team 
 
 
-  <div class="row">
-  <div class="column" style="background-color:#ffffff;">
-   <div class="card">
-     <img src="/img/dr.jpg" style="width:100%">
-     <h1> Stephen Bebee</h1>
-     <p class="title">Bean Program Leader, CIAT</p>
-     <a href="https://www.algolia.com/"><i class="fa fa-dribbble"></i></a>
-     <a href="#"><i class="fa fa-twitter"></i></a>
-     <a href="#"><i class="fa fa-linkedin"></i></a>
-     <a href="#"><i class="fa fa-facebook"></i></a>
-     <p><button>Contact</button></p>
-   </div> 
-  </div>
-  <div class="column" style="background-color:#ffffff;">
-    <div class="card">
-      <img src="/img/Bodo.jpg" style="width:100%">
-      <h1> Bodo Raatz</h1>
-      <p class="title">Bean Breeder, CIAT</p>
-      <a href="https://www.algolia.com/"><i class="fa fa-dribbble"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <p><button onclick="window.location.href = 'https://w3docs.com';">Contact</button></p>
-    </div> 
- </div>
-</div>
-  
-  
-  <br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
+<!--  Style for multiple columns -->
+<link href="/style2.css" rel="stylesheet"></link> 
 
 
-  
- <!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link href="/style.css" rel="stylesheet"></link> 
 
 <div class="row">
-  <div class="column" style="background-color:#ffffff;">
-   <div class="card">
-     <img src="/img/Daniel.jpg" style="width:100%">
-     <h1> Daniel Ariza</h1>
-     <p class="title">Research Assistant, CIAT</p>
-     <a href="https://www.algolia.com/"><i class="fa fa-dribbble"></i></a>
-     <a href="#"><i class="fa fa-twitter"></i></a>
-     <a href="#"><i class="fa fa-linkedin"></i></a>
-     <a href="#"><i class="fa fa-facebook"></i></a>
-     <p><button>Contact</button></p>
-   </div> 
+<!--  Bebee  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/dr2.jpg" style="width:80%"/>
+    </div>
+  <h3 class="profile-username text-center">Stephen Bebee</h3>
+  <p class="text-muted text-center">Bean Program Leader</p>
   </div>
-  <div class="column" style="background-color:#ffffff;">
-    <div class="card">
-      <img src="/img/test.jpg" style="width:100%">
-      <h1> Johan Aparicio</h1>
-      <p class="title">Research Assistant, CIAT</p>
-      <a href="https://www.algolia.com/"><i class="fa fa-dribbble"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <p><button onclick="window.location.href = 'https://w3docs.com';">Contact</button></p>
-    </div> 
- </div>
+</div>
+<!--  Bodo  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+   <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/Bodo2.jpg" style="width:80%"/>
+   </div>
+  <h3 class="profile-username text-center">Bodo Raatz</h3>
+  <p class="text-muted text-center">Bean Breeder</p>
+  </div>
+</div>
+<!--  Daniel  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/Daniel.jpg" style="width:80%"/>
+    </div>
+   <h3 class="profile-username text-center">Daniel Ariza</h3>
+   <p class="text-muted text-center">Research Assistant</p>
+  </div>
+</div>
+<!--  Johan  -->
+<div class="column" style="background-color:#ffffff;">
+   <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/test.jpg" style="width:80%"/>
+    </div>
+    <h3 class="profile-username text-center">Johan Aparicio</h3>
+    <p class="text-muted text-center">Research Assistant</p>
+    </div>
+   </div>
 </div>
 
-<br>
-<br>
-<br>
 
-<br>
-<br>
-<br>
+<!--  -------------------------------   -->
 
-<br>
-<br>
-<br>
+
+<div class="row">
+<!--  Victoria  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/victoria.jpg" style="width:80%"/>
+    </div>
+  <h3 class="profile-username text-center">Victoria Arredondo</h3>
+  <p class="text-muted text-center">Research Assistant</p>
+  </div>
+</div>
+<!--  Wilson  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+   <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/wilson.jpg" style="width:80%"/>
+   </div>
+  <h3 class="profile-username text-center">Wilson Santiago</h3>
+  <p class="text-muted text-center">Research Assistant</p>
+  </div>
+</div>
+<!--  Harold  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/harold.jpg" style="width:80%"/>
+    </div>
+   <h3 class="profile-username text-center">Harold Díaz</h3>
+   <p class="text-muted text-center">Research Assistant</p>
+  </div>
+</div>
+<!--  Juan Pablo  -->
+<div class="column" style="background-color:#ffffff;">
+   <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/jp.jpg" style="width:80%"/>
+    </div>
+    <h3 class="profile-username text-center">Juan Pablo Cantor</h3>
+    <p class="text-muted text-center">Research Assistant</p>
+    </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
