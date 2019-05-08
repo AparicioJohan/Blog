@@ -55,7 +55,6 @@
      <img src="/img/Daniel.jpg" style="width:100%">
      <h1> Daniel Ariza</h1>
      <p class="title">Research Assistant, CIAT</p>
-     <p>Universidad Nacional</p>
      <a href="https://www.algolia.com/"><i class="fa fa-dribbble"></i></a>
      <a href="#"><i class="fa fa-twitter"></i></a>
      <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -68,7 +67,6 @@
       <img src="/img/test.jpg" style="width:100%">
       <h1> Johan Aparicio</h1>
       <p class="title">Research Assistant, CIAT</p>
-      <p>Universidad del Valle</p>
       <a href="https://www.algolia.com/"><i class="fa fa-dribbble"></i></a>
       <a href="#"><i class="fa fa-twitter"></i></a>
       <a href="#"><i class="fa fa-linkedin"></i></a>

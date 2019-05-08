@@ -12,12 +12,15 @@
     
     
     <item>
-      <title>Bean</title>
+      <title>Andean Bean</title>
       <link>/post/bean/</link>
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/bean/</guid>
-      <description></description>
+      <description>Stephen Bebee Bean Program Leader
+   Bodo Raatz Bean Breeder
+   Daniel Ariza Research Assistant
+   Johan Aparicio Research Assistant</description>
     </item>
     
     <item>
@@ -27,19 +30,6 @@
       
       <guid>/post/readme/</guid>
       <description> Team Final Home </description>
-    </item>
-    
-    <item>
-      <title>Istio及Bookinfo示例程序安装试用笔记</title>
-      <link>/2017/11/04/istio-install_and_example/</link>
-      <pubDate>Sat, 04 Nov 2017 12:00:00 +0000</pubDate>
-      
-      <guid>/2017/11/04/istio-install_and_example/</guid>
-      <description>&lt;h2 id=&#34;服务网格简介&#34;&gt;服务网格简介&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;服务网格&lt;/strong&gt;（Service Mesh）是为解决微服务的通信和治理而出现的一种&lt;strong&gt;架构模式&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;服务网格将服务间通讯以及与此相关的管理控制功能从业务程序中下移到一个基础设施层，从而彻底隔离了业务逻辑和服务通讯两个关注点。采用服务网格后，应用开发者只需要关注并实现应用业务逻辑。服务之间的通信，包括服务发现，通讯的可靠性，通讯的安全性，服务路由等由服务网格层进行处理，并对应用程序透明。&lt;/p&gt;</description>
     </item>
     
     <item>
