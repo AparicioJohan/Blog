@@ -29,7 +29,7 @@ home = ["HTML", "RSS", "Algolia"]
   leancloud_app_key = ""
 
   # algolia site search
-  algolia_search = true
+  algolia_search = false
   algolia_appId = ""
   algolia_indexName = ""
   algolia_apiKey = ""
@@ -52,42 +52,36 @@ home = ["HTML", "RSS", "Algolia"]
 
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
   reward = false 
-  # reward_guide = "如果这篇文章对你有用,请随意打赏" 
+  # reward_guide = "" 
 
   friends = false
-  bookmarks = false
+  bookmarks = true
   about_me = true
 
   [params.social]
-  rss            = true 
-  email          = "youremail@gmail.com"
+  rss            = false 
+  email          = "J.aparicio@cgiar.org"
   #facebook      = "full profile url in facebook"
   #googleplus    = "full profile url in googleplus"
-  #twitter       = "full profile url in twitter"
+  twitter        = "https://twitter.com/CIAT_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
   linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
-  stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
+#  stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
   #instagram     = "full profile url in instagram"
-  github         = "https://github.com/yourgithub"
-  wechat         = "your wechat qr code image"
+  github         = "https://github.com/beanciat/"
+#  wechat         = "your wechat qr code image"
 #  medium         = "full profile url in medium"
   #pinterest     = "full profile url in pinterest"
   
   [[params.friend_link]]
-  title = "Linda的博客"
-  href =  "https://zhaozhihan.com"
+  title = "CIAT"
+  href =  "https://ciat.cgiar.org/"
 
   [[params.bookmark_link]]
-  title =  "Martin Fowler"
-  href =  "https://martinfowler.com"
+  title =  "CIAT"
+  href =  "https://ciat.cgiar.org/"
   [[params.bookmark_link]]
-  title = "ServiceMesher"
-  href =  "http://www.servicemesher.com"
-  [[params.bookmark_link]]
-  title =  "Pxhere"
-  href = "https://pxhere.com"
-  [[params.bookmark_link]]
-  title = "unsplash"
-  href = "https://unsplash.com"
+  title =  "MrBean"
+  href =  "https://apariciojohan.shinyapps.io/Mrbean/"
   
   [[params.addtional_menus]]
   title =  "BOOKS"
