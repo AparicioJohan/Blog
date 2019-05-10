@@ -1,17 +1,11 @@
-<!-- disqus 评论框 end -->
-<div id="disqus-comment"></div>
-{{ if .Site.Params.disqus_proxy }}
-<script src="{{ "js/iDisqus.js" | relURL }}"></script>
+<div id="disqus_thread"></div>
 <script>
-var disq = new iDisqus('disqus-comment', {
-    forum: '{{ .Site.DisqusShortname}}',
-    api: '{{ .Site.Params.disqus_proxy }}',
-	site: '{{ .Site.Params.disqus_site }}',
-    mode: 1,
-    timeout: 5000,
-    init: true
-});
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://bean-4.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
 </script>
-{{ else if .Site.DisqusShortname }}
-{{ template "_internal/disqus.html" . }}
-{{ end }}
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+

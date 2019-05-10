@@ -3,7 +3,7 @@ title = "Bean Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
-disqusShortname = "beanblog-1"
+disqusShortname = "bean-4"
 googleAnalytics = ""
 preserveTaxonomyNames = true
 paginate = 5 #frontpage pagination
@@ -47,8 +47,8 @@ home = ["HTML", "RSS", "Algolia"]
   
   # We need a proxy to access Disqus api in China
   # Follow https://github.com/zhaohuabing/disqus-php-api to set up your own disqus proxy
-  disqus_proxy = ""
-  disqus_site = ""
+  #disqus_proxy = ""
+  #disqus_site = ""
 
   #Enable wechat pay & alipay to allow readers send reward money if they like the articles 
   reward = false 
