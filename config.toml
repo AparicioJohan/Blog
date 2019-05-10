@@ -15,7 +15,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/ciat.jpg"
-  SEOTitle = "CIAT Blog"
+  SEOTitle = "Bean Blog"
   description = "Bean program"
   keyword = "statistic, Bean, CIAT, Bioinformatics , data, agriculture"
   slogan = "International Center for Tropical Agriculture"
@@ -99,3 +99,4 @@ notAlternative = true
 [params.algolia]
 vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
 params = ["categories", "tags"] 
+

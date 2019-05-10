@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SpATS on Bean Blog</title>
+    <link>/tags/spats/</link>
+    <description>Recent content in SpATS on Bean Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/spats/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Outlier Detection in Spatial Model</title>
+      <link>/post/outlier-detection-in-spatial-model/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/outlier-detection-in-spatial-model/</guid>
+      <description>ExampleRaw Data: Display of raw data in the field.Fitted Spatial Trend: Two-dimensional adjusted spatial trend without including the intercept.Fitted data: Fitted values of the model on the field.Genotypic BLUPs: The estimation of the random effects of the genotypes evaluated.Residuals: Display of errors on the field.Histogram: Distribution of BLUPs (Best Linear Unbiased Predictor).</description>
+    </item>
+    
+  </channel>
+</rss>

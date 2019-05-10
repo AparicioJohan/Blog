@@ -190,11 +190,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
-  <h4 class="profile-username text-center">Victoria Arredondo</h4>
-  <p class="text-muted text-center">Research Assistant   <br>
-              <a href="#"><i class="fa fa-twitter"></i></a>  
-              <a href="#"><i class="fa fa-linkedin"></i></a>  
-              <a href="#"><i class="fa fa-facebook"></i></a>  <br>  sacruzr@unal.edu.co  </p>  
+  <h4 class="profile-username text-center">sergio Cruz</h4>
+  <p class="text-muted text-center">Research Assistant  <br>  sacruzr@unal.edu.co <a href="#"><i class="fa fa-linkedin"></i></a>  </p> 
   </div>
 </div>
 </div>

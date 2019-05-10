@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Bean Blog</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Bean Blog</description>
+    <title>Statistics on Bean Blog</title>
+    <link>/categories/statistics/</link>
+    <description>Recent content in Statistics on Bean Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,29 +18,6 @@
       
       <guid>/post/outlier-detection-in-spatial-model/</guid>
       <description>ExampleRaw Data: Display of raw data in the field.Fitted Spatial Trend: Two-dimensional adjusted spatial trend without including the intercept.Fitted data: Fitted values of the model on the field.Genotypic BLUPs: The estimation of the random effects of the genotypes evaluated.Residuals: Display of errors on the field.Histogram: Distribution of BLUPs (Best Linear Unbiased Predictor).</description>
-    </item>
-    
-    <item>
-      <title>Andean Bean</title>
-      <link>/post/bean/</link>
-      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/bean/</guid>
-      <description>Top
-Home Pal13C_drt Pal14A_drt Pal14C_drt 
-HOME Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
- Menu 1 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
- Menu 2 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
- Menu 3 Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</description>
-    </item>
-    
-    <item>
-      <title>Biothecnology</title>
-      <link>/post/readme/</link>
-      <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/readme/</guid>
-      <description> Team Final Home </description>
     </item>
     
     <item>
