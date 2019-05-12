@@ -29,10 +29,10 @@ home = ["HTML", "RSS", "Algolia"]
   leancloud_app_key = ""
 
   # algolia site search
-  algolia_search = false
-  algolia_appId = ""
-  algolia_indexName = ""
-  algolia_apiKey = ""
+  algolia_search = true
+  algolia_appId = "7PWHXFEX4D"
+  algolia_indexName = "bean"
+  algolia_apiKey = "6b01cfe95895a7d2a6ae5196a070e656"
 
   # Sidebar settings
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
