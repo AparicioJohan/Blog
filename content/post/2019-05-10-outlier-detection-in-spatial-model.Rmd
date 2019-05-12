@@ -35,6 +35,13 @@ showtoc: false
 </ul>
 
 
+# What happened with Heritability?
+
+
+<center>
+ <img src="/img_sta/Heritability.gif" alt="Heritabiity"> 
+</center>
+
 
     
     
