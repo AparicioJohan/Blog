@@ -15,7 +15,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/ciat.jpg"
-  SEOTitle = "Home"
+  SEOTitle = "CIAT"
   description = "Bean program"
   keyword = "statistic, Bean, CIAT, Bioinformatics , data, agriculture"
   slogan = "International Center for Tropical Agriculture"
