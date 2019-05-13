@@ -115,7 +115,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
   <h4 class="profile-username text-center">Hector Buendia</h4>
-  <p class="text-muted text-center">Bean Program Leader </p>
+  <p class="text-muted text-center">Research Assistant </p>
   
   </div>
 </div>
