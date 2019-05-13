@@ -11,6 +11,8 @@
 
 
 
+<!--  -------------     1   ------------------   -->
+
 <div class="row">
 <!--  Bebee  -->
 <div class="column" style="background-color:#ffffff;">
@@ -19,7 +21,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/dr2.jpg" style="width:80%"/>
     </div>
   <h4 class="profile-username text-center">Stephen Beebe</h4>
-  <p class="text-muted text-center">Bean Program Leader<br>  S.Beebe@cgiar.org  </p>
+  <p class="text-muted text-center">Bean Program Leader</p>
   
   </div>
 </div>
@@ -30,7 +32,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/Bodo2.jpg" style="width:80%"/>
    </div>
   <h4 class="profile-username text-center">Bodo Raatz</h4>
-  <p class="text-muted text-center">Bean Breeder<br>    B.Raatz@cgiar.org  </p>
+  <p class="text-muted text-center">Bean Breeder </p>
   </div>
 </div>
 <!--  Daniel  -->
@@ -40,7 +42,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/Daniel.jpg" style="width:80%"/>
     </div>
    <h4 class="profile-username text-center">Daniel Ariza</h4> 
-   <p class="text-muted text-center">Research Assistant<br>  D.Ariza@cgiar.org  </p>
+   <p class="text-muted text-center">Research Assistant</p>
   </div>
 </div>
 <!--  Johan  -->
@@ -50,13 +52,13 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/test.jpg" style="width:80%"/>
     </div>
     <h4 class="profile-username text-center">Johan Aparicio</h4>
-    <p class="text-muted text-center">Research Assistant<br>  J.Aparicio@cgiar.org  </p>
+    <p class="text-muted text-center">Research Assistant </p>
     </div>
    </div>
 </div>
 
 
-<!--  -------------------------------   -->
+<!--  ---------------    2      ----------------   -->
 
 
 <div class="row">
@@ -67,7 +69,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/jp.jpg" style="width:80%"/>
     </div>
     <h4 class="profile-username text-center">Juan Cantor</h4>
-    <p class="text-muted text-center">Research Assistant<br>  J.P.Cantor@cgiar.org  </p>  
+    <p class="text-muted text-center">Research Assistant </p>  
     </div>
    </div>
 <!--  Wilson  -->
@@ -77,7 +79,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/wilson.jpg" style="width:80%"/>
    </div>
   <h4 class="profile-username text-center">Wilson Diaz</h4>
-  <p class="text-muted text-center">Research Assistant<br>   W.S.Diaz@cgiar.org   </p> 
+  <p class="text-muted text-center">Research Assistant </p> 
   </div>
 </div>
 <!--  Harold  -->
@@ -87,7 +89,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/harold.jpg" style="width:80%"/>
     </div>
    <h4 class="profile-username text-center">Harold Diaz</h4>
-   <p class="text-muted text-center">Research Assistant<br>   H.Diaz@cgiar.org  </p>  
+   <p class="text-muted text-center">Technician</p>  
   </div>
 </div>
 <!--  Victoria  -->
@@ -97,13 +99,13 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/victoria.jpg" style="width:80%"/>
     </div>
   <h4 class="profile-username text-center">Victoria Arredondo</h4>
-  <p class="text-muted text-center">Research Assistant<br>  v.e.arredondo@cgiar.org  </p>  
+  <p class="text-muted text-center">Research Assistant </p>  
   </div>
 </div>
 </div>
 
 
-<!--  -------------------------------   -->
+<!--  ----------------   3     ---------------   -->
 
 <div class="row">
 <!--  Hector  -->
@@ -113,7 +115,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
   <h4 class="profile-username text-center">Hector Buendia</h4>
-  <p class="text-muted text-center">Bean Program Leader<br>  h.f.buendia@cgiar.org  </p>
+  <p class="text-muted text-center">Bean Program Leader </p>
   
   </div>
 </div>
@@ -124,7 +126,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
    </div>
   <h4 class="profile-username text-center">Marcela Millán</h4>
-  <p class="text-muted text-center">Bean Breeder<br>  c.m.millan@cgiar.org  </p>
+  <p class="text-muted text-center">Bean Breeder </p>
   </div>
 </div>
 <!--  Elisabeth  -->
@@ -134,7 +136,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
     </div>
    <h4 class="profile-username text-center">Elisabeth Portilla</h4> 
-   <p class="text-muted text-center">Research Assistant<br>  a.e.portilla@cgiar.org  </p>
+   <p class="text-muted text-center">Research Assistant </p>
   </div>
 </div>
 <!--  Cesar  -->
@@ -144,13 +146,13 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
     <h4 class="profile-username text-center">Cesar Cajiao</h4>
-    <p class="text-muted text-center">Research Assistant<br>  c.cajiao@cgiar.org  </p>
+    <p class="text-muted text-center">Research Associate </p>
     </div>
    </div>
 </div>
 
 
-<!--  -------------------------------   -->
+<!--  ---------------   4        ----------------   -->
 
 
 <div class="row">
@@ -161,7 +163,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
     <h4 class="profile-username text-center">Miguel Grajales</h4>
-    <p class="text-muted text-center">Research Assistant<br>  m.a.grajales@cgiar.org  </p>  
+    <p class="text-muted text-center">Research Assistant </p>  
     </div>
    </div>
 <!--  Guerrero  -->
@@ -171,7 +173,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
    </div>
   <h4 class="profile-username text-center">Alberto Guerrero</h4>
-  <p class="text-muted text-center">Research Assistant<br>   F.guerrero@cgiar.org  </p> 
+  <p class="text-muted text-center">Systems Analyst</p> 
   </div>
 </div>
 <!--  Bueno  -->
@@ -181,30 +183,117 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
    <h4 class="profile-username text-center">Juan Bueno</h4>
-   <p class="text-muted text-center">Research Assistant<br>  J.Bueno@cgiar.org  </p>  
+   <p class="text-muted text-center">Research Associate </p>  
   </div>
 </div>
 <!--  Sergio  -->
 <div class="column" style="background-color:#ffffff;">
   <div class="card-body card-profile">
     <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
+    <img class="profile-user-img img-fluid img-circle" src="/img/sergio.png" style="width:80%"/>
     </div>
-  <h4 class="profile-username text-center">sergio Cruz</h4>
-  <p class="text-muted text-center">Research Assistant  <br>  sacruzr@unal.edu.co <a href="#"><i class="fa fa-linkedin"></i></a>  </p> 
+  <h4 class="profile-username text-center">Sergio Cruz</h4>
+  <p class="text-muted text-center">Visiting Researcher  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </p> 
   </div>
 </div>
 </div>
 
 
 
-<J.RICAURTE@cgiar.org>
-<M.Urban@cgiar.org>
-<l.m.diaz@cgiar.org>
-<e.macea@cgiar.org>
-<m.i.gomez@cgiar.org>
-<alamzp@gmail.com>
-<G.M.Mosquera@cgiar.org>
-<E.Espitia@cgiar.org>
+<!--  --------------   5    -----------------   -->
+
+
+<div class="row">
+<!--  Jaumer  -->
+<div class="column" style="background-color:#ffffff;">
+   <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
+    </div>
+    <h4 class="profile-username text-center">Jaumer Ricaurte</h4>
+    <p class="text-muted text-center">Research Associate </p>  
+    </div>
+   </div>
+<!--  Milan  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+   <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/milan.jpg" style="width:80%"/>
+   </div>
+  <h4 class="profile-username text-center">Milan Urban</h4>
+  <p class="text-muted text-center">Ams Researcher  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </p> 
+  </div>
+</div>
+<!--  Lucy  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
+    </div>
+   <h4 class="profile-username text-center">Lucy Diaz</h4>
+   <p class="text-muted text-center">Research Assistant </p>  
+  </div>
+</div>
+<!--  Eliana  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
+    </div>
+  <h4 class="profile-username text-center">Eliana Macea</h4>
+  <p class="text-muted text-center">Research Assistant  </p> 
+  </div>
+</div>
+</div>
+
+
+<!--  --------------   6    -----------------   -->
+
+
+<div class="row">
+<!--  Maria  -->
+<div class="column" style="background-color:#ffffff;">
+   <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
+    </div>
+    <h4 class="profile-username text-center">Maria Gómez</h4>
+    <p class="text-muted text-center">Research Associate </p>  
+    </div>
+   </div>
+<!--  Marcela  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+   <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/marcela.jpg" style="width:80%"/>
+   </div>
+  <h4 class="profile-username text-center">Marcela Millan</h4>
+  <p class="text-muted text-center">Administrative Analyst </p> 
+  </div>
+</div>
+<!--  Ernesto  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/ernesto.jpg" style="width:80%"/>
+    </div>
+   <h4 class="profile-username text-center">Ernesto Espitia</h4>
+   <p class="text-muted text-center">Research Assistant </p>  
+  </div>
+</div>
+<!--  Gloria  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
+    </div>
+  <h4 class="profile-username text-center">Gloria Mosquera</h4>
+  <p class="text-muted text-center">Plant Pathologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </p> 
+  </div>
+</div>
+</div>
+
+
+
 
 
