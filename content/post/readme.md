@@ -15,7 +15,5 @@ showtoc: false
 ## Final
 
 
-**Home**
-![screenshot](/img/frijol.jpg)
 
 
