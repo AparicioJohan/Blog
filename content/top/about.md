@@ -119,14 +119,14 @@
   
   </div>
 </div>
-<!--  Marcela  -->
+<!--  Carolina  -->
 <div class="column" style="background-color:#ffffff;">
   <div class="card-body card-profile">
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
    </div>
-  <h4 class="profile-username text-center">Marcela Millán</h4>
-  <p class="text-muted text-center">Bean Breeder </p>
+  <h4 class="profile-username text-center">carolina Lozano</h4>
+  <p class="text-muted text-center">Administrative Assistant </p>
   </div>
 </div>
 <!--  Elisabeth  -->
@@ -267,7 +267,7 @@
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/marcela.jpg" style="width:80%"/>
    </div>
-  <h4 class="profile-username text-center">Marcela Millan</h4>
+  <h4 class="profile-username text-center">Marcela Millán</h4>
   <p class="text-muted text-center">Administrative Analyst </p> 
   </div>
 </div>
