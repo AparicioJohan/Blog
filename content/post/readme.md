@@ -12,7 +12,6 @@ showtoc: false
 
 # Team
 
-
 ## Final
 
 
