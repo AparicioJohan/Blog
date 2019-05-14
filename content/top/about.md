@@ -20,8 +20,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/dr2.jpg" style="width:80%"/>
     </div>
-  <h4 class="profile-username text-center">Stephen Beebe</h4>
-  <p class="text-muted text-center">Bean Program Leader</p>
+  <center> <font size=5> <b>Stephen Beebe</b> </font> <br>
+       <font color="grey"> Bean Program Leader </font>  </center>
   
   </div>
 </div>
@@ -31,8 +31,8 @@
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/Bodo2.jpg" style="width:80%"/>
    </div>
-  <h4 class="profile-username text-center">Bodo Raatz</h4>
-  <p class="text-muted text-center">Bean Breeder </p>
+    <center> <font size=5> <b>Bodo Raatz</b> </font> <br>
+  <font color="grey">Bean Breeder </font>  </center>
   </div>
 </div>
 <!--  Daniel  -->
@@ -41,8 +41,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/Daniel.jpg" style="width:80%"/>
     </div>
-   <h4 class="profile-username text-center">Daniel Ariza</h4> 
-   <p class="text-muted text-center">Research Assistant</p>
+     <center> <font size=5> <b>Daniel Ariza</b> </font> <br> 
+   <font color="grey">Research Assistant</font>  </center>
   </div>
 </div>
 <!--  Johan  -->
@@ -51,8 +51,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/test.jpg" style="width:80%"/>
     </div>
-    <h4 class="profile-username text-center">Johan Aparicio</h4>
-    <p class="text-muted text-center">Research Assistant </p>
+      <center> <font size=5> <b>Johan Aparicio</b> </font> <br>
+    <font color="grey">Research Assistant </font>  </center>
     </div>
    </div>
 </div>
@@ -68,8 +68,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/jp.jpg" style="width:80%"/>
     </div>
-    <h4 class="profile-username text-center">Juan Cantor</h4>
-    <p class="text-muted text-center">Research Assistant </p>  
+      <center> <font size=5> <b>Juan Cantor</b> </font> <br>
+    <font color="grey">Research Assistant </font>  </center>  
     </div>
    </div>
 <!--  Wilson  -->
@@ -78,8 +78,8 @@
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/wilson.jpg" style="width:80%"/>
    </div>
-  <h4 class="profile-username text-center">Wilson Diaz</h4>
-  <p class="text-muted text-center">Research Assistant </p> 
+    <center> <font size=5> <b>Wilson Diaz</b> </font> <br>
+  <font color="grey">Research Assistant </font>  </center> 
   </div>
 </div>
 <!--  Harold  -->
@@ -88,8 +88,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/harold.jpg" style="width:80%"/>
     </div>
-   <h4 class="profile-username text-center">Harold Diaz</h4>
-   <p class="text-muted text-center">Technician</p>  
+     <center> <font size=5> <b>Harold Diaz</b> </font> <br>
+   <font color="grey">Technician</font>  </center>  
   </div>
 </div>
 <!--  Victoria  -->
@@ -98,8 +98,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/victoria.jpg" style="width:80%"/>
     </div>
-  <h4 class="profile-username text-center">Victoria Arredondo</h4>
-  <p class="text-muted text-center">Research Assistant </p>  
+    <center> <font size=5> <b>Victoria Arredondo</b> </font> <br>
+  <font color="grey">Research Assistant </font>  </center>  
   </div>
 </div>
 </div>
@@ -114,8 +114,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
-  <h4 class="profile-username text-center">Hector Buendia</h4>
-  <p class="text-muted text-center">Research Assistant </p>
+    <center> <font size=5> <b>Hector Buendia</b> </font> <br>
+  <font color="grey">Research Assistant </font>  </center>
   
   </div>
 </div>
@@ -125,8 +125,8 @@
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
    </div>
-  <h4 class="profile-username text-center">carolina Lozano</h4>
-  <p class="text-muted text-center">Administrative Assistant </p>
+    <center> <font size=5> <b>carolina Lozano</b> </font> <br>
+  <font color="grey">Administrative Assistant </font>  </center>
   </div>
 </div>
 <!--  Elisabeth  -->
@@ -135,8 +135,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
     </div>
-   <h4 class="profile-username text-center">Elisabeth Portilla</h4> 
-   <p class="text-muted text-center">Research Assistant </p>
+     <center> <font size=5> <b>Elisabeth Portilla</b> </font> <br> 
+   <font color="grey">Research Assistant </font>  </center>
   </div>
 </div>
 <!--  Cesar  -->
@@ -145,8 +145,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
-    <h4 class="profile-username text-center">Cesar Cajiao</h4>
-    <p class="text-muted text-center">Research Associate </p>
+      <center> <font size=5> <b>Cesar Cajiao</b> </font> <br>
+    <font color="grey">Research Associate </font>  </center>
     </div>
    </div>
 </div>
@@ -162,8 +162,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
-    <h4 class="profile-username text-center">Miguel Grajales</h4>
-    <p class="text-muted text-center">Research Assistant </p>  
+      <center> <font size=5> <b>Miguel Grajales</b> </font> <br>
+    <font color="grey">Research Assistant </font>  </center>  
     </div>
    </div>
 <!--  Guerrero  -->
@@ -172,8 +172,8 @@
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
    </div>
-  <h4 class="profile-username text-center">Alberto Guerrero</h4>
-  <p class="text-muted text-center">Systems Analyst</p> 
+    <center> <font size=5> <b>Alberto Guerrero</b> </font> <br>
+  <font color="grey">Systems Analyst</font>  </center> 
   </div>
 </div>
 <!--  Bueno  -->
@@ -182,8 +182,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
-   <h4 class="profile-username text-center">Juan Bueno</h4>
-   <p class="text-muted text-center">Research Associate </p>  
+     <center> <font size=5> <b>Juan Bueno</b> </font> <br>
+   <font color="grey">Research Associate </font>  </center>  
   </div>
 </div>
 <!--  Sergio  -->
@@ -192,8 +192,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/sergio.png" style="width:80%"/>
     </div>
-  <h4 class="profile-username text-center">Sergio Cruz</h4>
-  <p class="text-muted text-center">Visiting Researcher  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </p> 
+    <center> <font size=5> <b>Sergio Cruz</b> </font> <br>
+  <font color="grey">Visiting Researcher  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
   </div>
 </div>
 </div>
@@ -210,8 +210,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
-    <h4 class="profile-username text-center">Jaumer Ricaurte</h4>
-    <p class="text-muted text-center">Research Associate </p>  
+      <center> <font size=5> <b>Jaumer Ricaurte</b> </font> <br>
+    <font color="grey">Research Associate </font>  </center>  
     </div>
    </div>
 <!--  Milan  -->
@@ -220,8 +220,8 @@
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/milan.jpg" style="width:80%"/>
    </div>
-  <h4 class="profile-username text-center">Milan Urban</h4>
-  <p class="text-muted text-center"> Bean Physiologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </p> 
+    <center> <font size=5> <b>Milan Urban</b> </font> <br>
+  <font color="grey"> Bean Physiologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
   </div>
 </div>
 <!--  Lucy  -->
@@ -230,8 +230,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
     </div>
-   <h4 class="profile-username text-center">Lucy Diaz</h4>
-   <p class="text-muted text-center">Research Assistant </p>  
+     <center> <font size=5> <b>Lucy Diaz</b> </font> <br>
+   <font color="grey">Research Assistant </font>  </center>  
   </div>
 </div>
 <!--  Eliana  -->
@@ -240,8 +240,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
     </div>
-  <h4 class="profile-username text-center">Eliana Macea</h4>
-  <p class="text-muted text-center">Research Assistant  </p> 
+    <center> <font size=5> <b>Eliana Macea</b> </font> <br>
+  <font color="grey">Research Assistant  </font>  </center> 
   </div>
 </div>
 </div>
@@ -257,8 +257,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
-    <h4 class="profile-username text-center">Maria Gómez</h4>
-    <p class="text-muted text-center">Research Associate </p>  
+      <center> <font size=5> <b>Maria Gómez</b> </font> <br>
+    <font color="grey">Research Associate </font>  </center>  
     </div>
    </div>
 <!--  Marcela  -->
@@ -267,8 +267,8 @@
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/marcela.jpg" style="width:80%"/>
    </div>
-  <h4 class="profile-username text-center">Marcela Millán</h4>
-  <p class="text-muted text-center">Administrative Analyst </p> 
+    <center> <font size=5> <b>Marcela Millán</b> </font> <br>
+  <font color="grey">Administrative Analyst </font>  </center> 
   </div>
 </div>
 <!--  Ernesto  -->
@@ -277,8 +277,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/ernesto.jpg" style="width:80%"/>
     </div>
-   <h4 class="profile-username text-center">Ernesto Espitia</h4>
-   <p class="text-muted text-center">Research Assistant </p>  
+     <center> <font size=5> <b>Ernesto Espitia</b> </font> <br>
+   <font color="grey">Research Assistant </font>  </center>  
   </div>
 </div>
 <!--  Gloria  -->
@@ -287,8 +287,8 @@
     <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
     </div>
-  <h4 class="profile-username text-center">Gloria Mosquera</h4>
-  <p class="text-muted text-center">Plant Pathologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </p> 
+    <center> <font size=5> <b>Gloria Mosquera</b> </font> <br>
+  <font color="grey">Plant Pathologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
   </div>
 </div>
 </div>
