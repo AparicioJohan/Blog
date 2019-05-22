@@ -1,4 +1,4 @@
-baseurl = "https://zhaohuabing.com"
+baseurl = "/"
 title = "Bean Blog"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
@@ -54,7 +54,7 @@ home = ["HTML", "RSS", "Algolia"]
   reward = false 
   # reward_guide = "" 
 
-  friends = false
+  friends = true
   bookmarks = true
   about_me = true
 
