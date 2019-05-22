@@ -1,5 +1,5 @@
 ---
-title: Outlier Detection in Spatial Model
+title: Outlier Detection in Spatial Model using SpATS
 author: Aparicio, Johan
 date: '2019-05-10'
 slug: outlier-detection-in-spatial-model
