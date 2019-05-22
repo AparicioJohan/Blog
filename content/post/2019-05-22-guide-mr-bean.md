@@ -14,7 +14,6 @@ showtoc: false
 ---
 
 
-
 <FONT SIZE=7>Mr.Bean</font>
 
 
@@ -68,12 +67,11 @@ Use this sub-module to identify possible outliers in your response variable. The
 		Use this sub-module to visualize the BLUEs/BLUPs from the previous fitted model. There's also a download button for your BLUEs/BLUPs.</p>
 		</div>
 
-
 <div>
 
  <li><h3>	Comparison </h3> </li>
 <p >
-	Use this module to make multiple comparisons from e.g. multiple environments, multiple traits, etc. using Pearson correlation coeffiecients for paired comparisons and PCA for multiple comparisons. This module provides its own box for uploading your data.</p> 	
+	Use this module to make multiple comparisons from e.g. multiple environments, multiple traits, etc. Using Pearson correlation coeffiecients for paired comparisons and PCA for multiple comparisons. This module provides its own box for uploading your data.</p> 	
 
 
 	
