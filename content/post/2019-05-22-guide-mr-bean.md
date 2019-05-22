@@ -7,7 +7,7 @@ categories:
   - Statistics
 tags:
   - SpATS
-subtitle: 'Application'
+subtitle: 'Application for Spatial Analysis'
 description: 'User guide Mr.Bean'
 image: ''
 showtoc: false
