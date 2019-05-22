@@ -6,10 +6,20 @@
     <description>Recent content in Statistics on Bean Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Guide Mr.Bean</title>
+      <link>/post/guide-mr-bean/</link>
+      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/guide-mr-bean/</guid>
+      <description>Mr.Bean
+Is a web application for simplifying the analysis of large-scale plant breeding experiments using spatial analysis , as implemented in the R-package SpATS . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models (MLM) with or without spatial correction, retrieve  BLUPs/BLUEs and heritabilites from single-environment trials. Mr. Bean also provides a module for comparing multiple sources data (e.g. multiple environments, multiple traits, etc.) using Pearson correlation coeffiecients and principal component analysis  (PCA) .</description>
+    </item>
     
     <item>
       <title>Outlier Detection in Spatial Model</title>

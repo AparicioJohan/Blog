@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Bean Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SpATS</title>
+      <link>/tags/spats/</link>
+      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/spats/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Outliers</title>
@@ -26,15 +35,6 @@
       <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SpATS</title>
-      <link>/tags/spats/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/spats/</guid>
       <description></description>
     </item>
     

@@ -4,13 +4,42 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/guide-mr-bean/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/spats/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/statistics/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -26,31 +55,7 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/spats/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/statistics/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
