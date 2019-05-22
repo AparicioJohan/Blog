@@ -7,12 +7,11 @@ categories:
   - Statistics
 tags:
   - SpATS
-subtitle: ''
-description: 'User guide Mr.Bean app'
+subtitle: 'Application'
+description: 'User guide Mr.Bean'
 image: ''
 showtoc: false
 ---
-
 
 
 
