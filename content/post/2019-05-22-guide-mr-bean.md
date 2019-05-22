@@ -13,11 +13,19 @@ image: ''
 showtoc: false
 ---
 
+<style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
+
+
 
 <FONT SIZE=7>Mr.Bean</font>
 
-
-Is a web application for simplifying the analysis of large-scale plant breeding experiments using <em>spatial analysis</em> , as implemented in the <code>R-package</code>  <code>SpATS</code> . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models <strong>(MLM)</strong>  with or without spatial correction, retrieve <em> BLUPs/BLUEs</em>  and heritabilites from single-environment trials. Mr. Bean also provides a module for comparing multiple sources data (e.g. multiple environments, multiple traits, etc.) using Pearson correlation coeffiecients and principal component analysis <strong>  (PCA) </strong>. 
+<div>
+Is a web application for simplifying the analysis of large-scale plant breeding experiments using <em>spatial analysis</em> , as implemented in the <code>R-package</code>  <code>SpATS</code> . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models <strong>(MLM)</strong>  with or without spatial correction, retrieve <em> BLUPs/BLUEs</em>  and heritabilites from single-environment trials. Mr. Bean also provides a module for comparing multiple sources data (e.g. multiple environments, multiple traits, etc.) using Pearson correlation coeffiecients and principal component analysis <strong>  (PCA) </strong>. </div>
 
  <ul>
 <div>
@@ -47,6 +55,7 @@ Use this sub-module to fit the MLM with spatial correction. Follow the <em>  ste
 	 <ul>  
   <li>	<h4>Residuals</h4></li>
 </ul> 
+
 
 Use this sub-module to identify possible outliers in your response variable. The "Raw-data" boxes display the outliers from your raw data that were identified using the median absolute deviation (MAD) and the inter-quartilic range (IQR). The "Residual" boxes display observations with extreme residuals that were identified after fitting the MLM. After setting the outlier observations as NA depending on the chosen method (you can choose one, two or all the proposed methods), you can download the cleaned dataset. Load this file in the Data module to fit the model without outlier observations.</div>
 
