@@ -20,6 +20,10 @@ div {
 }
 </style>
 
+<link href="/style.css" rel="stylesheet"></link> 
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa fa-arrow-up"></i> </button>
 
 
 # Mr.Bean
@@ -80,4 +84,4 @@ Use this sub-module to identify possible outliers in your response variable. The
 </div>
 
 	
-
+ <script type="text/javascript" src="/java.js"></script>

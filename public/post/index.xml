@@ -17,7 +17,9 @@
       <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/guide-mr-bean/</guid>
-      <description>div { text-align: justify; text-justify: inter-word; }  Mr.Bean  Is a web application for simplifying the analysis of large-scale plant breeding experiments using spatial analysis , as implemented in the R-package SpATS . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models (MLM) with or without spatial correction, retrieve  BLUPs/BLUEs and heritabilites from single-environment trials. Mr. Bean also provides a module for comparing multiple sources data (e.</description>
+      <description>div { text-align: justify; text-justify: inter-word; }  
+ 
+Mr.Bean  Is a web application for simplifying the analysis of large-scale plant breeding experiments using spatial analysis , as implemented in the R-package SpATS . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models (MLM) with or without spatial correction, retrieve  BLUPs/BLUEs and heritabilites from single-environment trials. Mr. Bean also provides a module for comparing multiple sources data (e.</description>
     </item>
     
     <item>
@@ -35,8 +37,7 @@
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/bean/</guid>
-      <description>Top
-Home Pal13C_drt Pal14A_drt Pal14C_drt 
+      <description>Home Pal13C_drt Pal14A_drt Pal14C_drt 
 HOME Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
  Menu 1 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
  Menu 2 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.

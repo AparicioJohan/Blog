@@ -45,16 +45,16 @@
    <font color="grey">Research Assistant</font>  </center>
   </div>
 </div>
-<!--  Johan  -->
+<!--  Milan  -->
 <div class="column" style="background-color:#ffffff;">
-   <div class="card-body card-profile">
-    <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/test.jpg" style="width:80%"/>
-    </div>
-      <center> <font size=5> <b>Johan Aparicio</b> </font> <br>
-    <font color="grey">Research Assistant </font>  </center>
-    </div>
+  <div class="card-body card-profile">
+   <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/mn.jpg" style="width:80%"/>
    </div>
+    <center> <font size=5> <b>Milan Urban</b> </font> <br>
+  <font color="grey"> Bean Physiologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
+  </div>
+</div>
 </div>
 
 
@@ -125,7 +125,7 @@
    <div class="text-center">
     <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
    </div>
-    <center> <font size=5> <b>carolina Lozano</b> </font> <br>
+    <center> <font size=5> <b>Carolina Lozano</b> </font> <br>
   <font color="grey">Administrative Assistant </font>  </center>
   </div>
 </div>
@@ -214,16 +214,16 @@
     <font color="grey">Research Associate </font>  </center>  
     </div>
    </div>
-<!--  Milan  -->
+<!--  Johan  -->
 <div class="column" style="background-color:#ffffff;">
-  <div class="card-body card-profile">
-   <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/milan.jpg" style="width:80%"/>
+   <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/test.jpg" style="width:80%"/>
+    </div>
+      <center> <font size=5> <b>Johan Aparicio</b> </font> <br>
+    <font color="grey">Research Assistant </font>  </center>
+    </div>
    </div>
-    <center> <font size=5> <b>Milan Urban</b> </font> <br>
-  <font color="grey"> Bean Physiologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
-  </div>
-</div>
 <!--  Lucy  -->
 <div class="column" style="background-color:#ffffff;">
   <div class="card-body card-profile">
