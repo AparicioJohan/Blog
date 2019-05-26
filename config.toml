@@ -35,7 +35,7 @@ home = ["HTML", "RSS", "Algolia"]
   algolia_apiKey = "02822e760a5e0760f84d586b030fa1dc"
 
   # Sidebar settings
-  sidebar_about_description = "Team"
+  sidebar_about_description = "Bean Team"
   #sidebar_avatar = "img/avatar-zhaohuabing.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
   sidebar_avatar = "img/team.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
