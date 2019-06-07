@@ -35,14 +35,14 @@
   <font color="grey">Bean Breeder </font>  </center>
   </div>
 </div>
-<!--  Daniel  -->
+<!--  Gloria  -->
 <div class="column" style="background-color:#ffffff;">
   <div class="card-body card-profile">
     <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/Daniel.jpg" style="width:80%"/>
+    <img class="profile-user-img img-fluid img-circle" src="/img/gloria.jpg" style="width:80%"/>
     </div>
-     <center> <font size=5> <b>Daniel Ariza</b> </font> <br> 
-   <font color="grey">Research Assistant</font>  </center>
+    <center> <font size=5> <b>Gloria Mosquera</b> </font> <br>
+  <font color="grey">Plant Pathologist  <br> <a href="https://co.linkedin.com/in/gloria-mosquera-6088b733"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
   </div>
 </div>
 <!--  Milan  -->
@@ -59,6 +59,53 @@
 
 
 <!--  ---------------    2      ----------------   -->
+
+
+<div class="row">
+<!--  Jaumer  -->
+<div class="column" style="background-color:#ffffff;">
+   <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
+    </div>
+      <center> <font size=5> <b>Jaumer Ricaurte</b> </font> <br>
+    <font color="grey">Research Associate </font>  </center>  
+    </div>
+   </div>
+
+<!--  Bueno  -->
+<div class="column" style="background-color:#ffffff;">
+  <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
+    </div>
+     <center> <font size=5> <b>Juan Bueno</b> </font> <br>
+   <font color="grey">Research Associate </font>  </center>  
+  </div>
+</div>
+<!--  Cesar  -->
+<div class="column" style="background-color:#ffffff;">
+   <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
+    </div>
+      <center> <font size=5> <b>Cesar Cajiao</b> </font> <br>
+    <font color="grey">Research Associate </font>  </center>
+    </div>
+   </div>
+   <!--  Grajales  -->
+<div class="column" style="background-color:#ffffff;">
+   <div class="card-body card-profile">
+    <div class="text-center">
+    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
+    </div>
+      <center> <font size=5> <b>Miguel Grajales</b> </font> <br>
+    <font color="grey">Research Assistant </font>  </center>  
+    </div>
+   </div>
+</div>
+
+<!--  ---------------    3      ----------------   -->
 
 
 <div class="row">
@@ -105,7 +152,7 @@
 </div>
 
 
-<!--  ----------------   3     ---------------   -->
+<!--  ----------------   4     ---------------   -->
 
 <div class="row">
 <!--  Hector  -->
@@ -139,33 +186,6 @@
    <font color="grey">Research Assistant </font>  </center>
   </div>
 </div>
-<!--  Cesar  -->
-<div class="column" style="background-color:#ffffff;">
-   <div class="card-body card-profile">
-    <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
-    </div>
-      <center> <font size=5> <b>Cesar Cajiao</b> </font> <br>
-    <font color="grey">Research Associate </font>  </center>
-    </div>
-   </div>
-</div>
-
-
-<!--  ---------------   4        ----------------   -->
-
-
-<div class="row">
-<!--  Grajales  -->
-<div class="column" style="background-color:#ffffff;">
-   <div class="card-body card-profile">
-    <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
-    </div>
-      <center> <font size=5> <b>Miguel Grajales</b> </font> <br>
-    <font color="grey">Research Assistant </font>  </center>  
-    </div>
-   </div>
 <!--  Guerrero  -->
 <div class="column" style="background-color:#ffffff;">
   <div class="card-body card-profile">
@@ -176,16 +196,13 @@
   <font color="grey">Systems Analyst</font>  </center> 
   </div>
 </div>
-<!--  Bueno  -->
-<div class="column" style="background-color:#ffffff;">
-  <div class="card-body card-profile">
-    <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
-    </div>
-     <center> <font size=5> <b>Juan Bueno</b> </font> <br>
-   <font color="grey">Research Associate </font>  </center>  
-  </div>
 </div>
+
+
+<!--  --------------   5    -----------------   -->
+
+
+<div class="row">
 <!--  Sergio  -->
 <div class="column" style="background-color:#ffffff;">
   <div class="card-body card-profile">
@@ -196,29 +213,11 @@
   <font color="grey">Visiting Researcher  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
   </div>
 </div>
-</div>
-
-
-
-<!--  --------------   5    -----------------   -->
-
-
-<div class="row">
-<!--  Jaumer  -->
-<div class="column" style="background-color:#ffffff;">
-   <div class="card-body card-profile">
-    <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
-    </div>
-      <center> <font size=5> <b>Jaumer Ricaurte</b> </font> <br>
-    <font color="grey">Research Associate </font>  </center>  
-    </div>
-   </div>
 <!--  Johan  -->
 <div class="column" style="background-color:#ffffff;">
    <div class="card-body card-profile">
     <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/johan2.jpg" style="width:80%"/>
+    <img class="profile-user-img img-fluid img-circle" src="/img/johan.jpg" style="width:80%"/>
     </div>
       <center> <font size=5> <b>Johan Aparicio</b> </font> <br>
     <font color="grey">Research Assistant </font>  </center>
@@ -255,7 +254,7 @@
 <div class="column" style="background-color:#ffffff;">
    <div class="card-body card-profile">
     <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
+    <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
     </div>
       <center> <font size=5> <b>Maria Gómez</b> </font> <br>
     <font color="grey">Research Associate </font>  </center>  
@@ -281,14 +280,14 @@
    <font color="grey">Research Assistant </font>  </center>  
   </div>
 </div>
-<!--  Gloria  -->
+<!--  Daniel  -->
 <div class="column" style="background-color:#ffffff;">
   <div class="card-body card-profile">
     <div class="text-center">
-    <img class="profile-user-img img-fluid img-circle" src="/img/woman.png" style="width:80%"/>
+    <img class="profile-user-img img-fluid img-circle" src="/img/Daniel.jpg" style="width:80%"/>
     </div>
-    <center> <font size=5> <b>Gloria Mosquera</b> </font> <br>
-  <font color="grey">Plant Pathologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
+     <center> <font size=5> <b>Daniel Ariza</b> </font> <br> 
+   <font color="grey">Research Assistant</font>  </center>
   </div>
 </div>
 </div>

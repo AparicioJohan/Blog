@@ -37,11 +37,7 @@ Mr.Bean  Is a web application for simplifying the analysis of large-scale plant 
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/bean/</guid>
-      <description>Home Pal13C_drt Pal14A_drt Pal14C_drt 
-HOME Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
- Menu 1 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
- Menu 2 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
- Menu 3 Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</description>
+      <description>--</description>
     </item>
     
     <item>
@@ -51,17 +47,6 @@ HOME Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod te
       
       <guid>/post/readme/</guid>
       <description> Team Final </description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
     <item>
@@ -80,7 +65,7 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       
       <guid>/top/about/</guid>
       <description>Team 
-  Stephen Beebe  Bean Program Leader       Bodo Raatz  Bean Breeder       Daniel Ariza  Research Assistant      Milan Urban  Bean Physiologist         Juan Cantor  Research Assistant       Wilson Diaz  Research Assistant       Harold Diaz  Technician      Victoria Arredondo  Research Assistant        Hector Buendia  Research Assistant       Carolina Lozano  Administrative Assistant       Elisabeth Portilla  Research Assistant       Cesar Cajiao  Research Associate        Miguel Grajales  Research Assistant       Alberto Guerrero  Systems Analyst      Juan Bueno  Research Associate       Sergio Cruz  Visiting Researcher         Jaumer Ricaurte  Research Associate       Johan Aparicio  Research Assistant       Lucy Diaz  Research Assistant       Eliana Macea  Research Assistant        Maria Gómez  Research Associate       Marcela Millán  Administrative Analyst       Ernesto Espitia  Research Assistant       Gloria Mosquera  Plant Pathologist</description>
+  Stephen Beebe  Bean Program Leader       Bodo Raatz  Bean Breeder       Gloria Mosquera  Plant Pathologist        Milan Urban  Bean Physiologist         Jaumer Ricaurte  Research Associate       Juan Bueno  Research Associate       Cesar Cajiao  Research Associate       Miguel Grajales  Research Assistant        Juan Cantor  Research Assistant       Wilson Diaz  Research Assistant       Harold Diaz  Technician      Victoria Arredondo  Research Assistant        Hector Buendia  Research Assistant       Carolina Lozano  Administrative Assistant       Elisabeth Portilla  Research Assistant       Alberto Guerrero  Systems Analyst       Sergio Cruz  Visiting Researcher        Johan Aparicio  Research Assistant       Lucy Diaz  Research Assistant       Eliana Macea  Research Assistant        Maria Gómez  Research Associate       Marcela Millán  Administrative Analyst       Ernesto Espitia  Research Assistant       Daniel Ariza  Research Assistant</description>
     </item>
     
     <item>
