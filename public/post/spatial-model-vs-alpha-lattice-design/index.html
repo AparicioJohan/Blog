@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="Spatial Model vs Alpha Lattice Design" />
+    <meta property="og:title" content="Spatial Model vs Alpha Lattice Design" />
+    <meta property="twitter:title" content="Spatial Model vs Alpha Lattice Design" />
     
 
     
-    <meta name="description" content="Bean program">
-    <meta property="og:description" content="Bean program" />
-    <meta property="twitter:description" content="Bean program" />
+    <meta name="description" content="SpATS vs lme4">
+    <meta property="og:description" content="SpATS vs lme4" />
+    <meta property="twitter:description" content="SpATS vs lme4" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="statistic, Bean, CIAT, Bioinformatics , data, agriculture">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Searches-CIAT</title>
+    <title>Spatial Model vs Alpha Lattice Design-CIAT</title>
 
-    <link rel="canonical" href="/search/">
+    <link rel="canonical" href="/post/spatial-model-vs-alpha-lattice-design/">
 
     <link rel="stylesheet" href="/css/iDisqus.min.css"/>
 	
@@ -151,14 +151,43 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/ciat.jpg')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/ciat.jpg')
+    }
+</style>
+<header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1>Bean Blog </h1>
-                    
-		    <span class="subheading">International Center for Tropical Agriculture</span>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/r" title="R">
+                            R
+                        </a>
+                        
+                        <a class="tag" href="/tags/spats" title="SpATS">
+                            SpATS
+                        </a>
+                        
+                        <a class="tag" href="/tags/lme4" title="lme4">
+                            lme4
+                        </a>
+                        
+                    </div>
+                    <h1>Spatial Model vs Alpha Lattice Design</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+			Posted by 
+			
+			    Aparicio, Johan
+			 
+			on 
+			Friday, June 14, 2019
+                        
+                    </span>
                 </div>
             </div>
         </div>
@@ -167,250 +196,281 @@
 
 
 
-<div class="container">
-    <div class="row">
-        
-        
-   	    <div class="
-            col-lg-8 col-lg-offset-1
-            col-md-8 col-md-offset-1
-            col-sm-12
-            col-xs-12
-            post-container
-        ">
+
+<article>
+    <div class="container">
+        <div class="row">
+
             
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css">
-<br>
-<div id="search-searchbar"></div>
- <div class="post-list" id="search-hits">
- </div>
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-<script>
-const search = instantsearch({
-  appId: 'V0DMRF62ZX',
-  indexName: 'blog',
-  apiKey: '02822e760a5e0760f84d586b030fa1dc'
-});
+                
+                
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
-const hitTemplate = function(hit) {
-
-
-  let date = '';
-  if (hit.date) {
-    date = moment.unix(hit.date).format('MMM D, YYYY');
-  }
-  let url = `${hit.url}#${hit.anchor}`;
-  const title = hit._highlightResult.title.value;
-
-  let breadcrumbs = '';
-  if (hit._highlightResult.headings) {
-    breadcrumbs = hit._highlightResult.headings.map(match => {
-      return `<span class="post-breadcrumb">${match.value}</span>`
-    }).join(' > ')
-  }
-
-  let content = "" ; 
-  if (hit._highlightResult.content){
-      content = hit._highlightResult.content.value;
-  }
-  else{
-      content = hit.summary;
-  }
-
-
-  return `
-    <div class="post-item">
-      <span class="post-meta">${date}</span>
-      <h2><a class="post-link" href="${url}">${title}</a></h2>
-      <a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
-      <div class="post-snippet">${content}</div>
-    </div>
-  `;
-}
-
-
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '#search-searchbar',
-    placeholder: 'Search into posts...',
-    poweredBy: true // This is required if you're on the free Community plan
-  })
-);
-
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '#search-hits',
-    templates: {
-      item: hitTemplate
-    }
-  })
-);
-
-search.start();
-</script>
 
 <style>
-.ais-search-box {
-  max-width: 100%;
-  margin-bottom: 15px;
-}
-.post-item {
-  margin-bottom: 30px;
-}
-.post-link .ais-Highlight {
-  color: #111;
-  font-style: normal;
-  text-decoration: underline;
-}
-.post-breadcrumbs {
-  color: #424242;
-  display: block;
-}
-.post-breadcrumb {
-  font-size: 18px;
-  color: #424242;
-}
-.post-breadcrumb .ais-Highlight {
-  font-weight: bold;
-  font-style: normal;
-}
-.post-snippet .ais-Highlight {
-  color: #2a7ae2;
-  font-style: normal;
-  font-weight: bold;
-}
-.post-snippet img {
-  display: none;
+p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 </style>
+<div id="comparacion-spats-y-lme4" class="section level1">
+<h1>Comparación SpATS y lme4</h1>
+<p>
+Una duda que podría surgirnos en el momento de analizar nuestros ensayos de campo es qué tan bueno puede ser un modelo que tenga en cuenta componentes espaciales, frente a un diseño experimental tradicional como lo es un diseño alfa lattice. Definimos aquí el alfa lattice como un diseño en bloques completos (todos los genotipos dentro de cada bloque) y dentro de cada bloque o repetición, bloques incompletos compuestos por un subconjunto de genotipos.
+</p>
+<table class="table table-striped table-hover table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+yield
+</th>
+<th style="text-align:left;">
+geno
+</th>
+<th style="text-align:left;">
+rep
+</th>
+<th style="text-align:right;">
+row
+</th>
+<th style="text-align:right;">
+col
+</th>
+<th style="text-align:left;">
+rowcode
+</th>
+<th style="text-align:left;">
+colcode
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+483
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+526
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+557
+</td>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+564
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+498
+</td>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+510
+</td>
+<td style="text-align:left;">
+32
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-       	</div>
-        
 
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FEATURED TAGS</h5>
-        <div class="tags">
-             
-            
                 
-            
-                
-            
-                
-                    <a href="/tags/r" title="r">
-                        r
-                    </a>
-                
-            
-                
-                    <a href="/tags/spats" title="spats">
-                        spats
-                    </a>
-                
-            
-        </div>
-    </section>
-    
 
-    
-	
-    <section class="visible-md visible-lg">
-	<hr><h5><a href="/top/about">ABOUT US</a></h5>
-        <div class="short-about">
-            
-            <a href="/top/about">
-               <img src="/img/team.jpg" alt="avatar" style="cursor: pointer" />
-            </a>
-            
-            
-                <p>Bean Team</p>
-            
-           
-           <ul class="list-inline"> 
-               
-               
-               <li>
-                   <a href="https://twitter.com/CIAT_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                       <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               
-               
-               
-               
-               <li>
-                   <a target="_blank" href="https://github.com/beanciat/">
-                       <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
-               <li>
-                   <a target="_blank" href="https://www.linkedin.com/in/yourlinkedinid">
-                       <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                       </span>
-                   </a>
-               </li>
-               
-               
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/guide-mr-bean/" data-toggle="tooltip" data-placement="top" title="Guide Mr.Bean">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
                 </ul>
+
+                <div id="disqus_thread"></div>
+<script>
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://bean-4.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
             </div>
-    </section>
-	
-    
-    
-    <section>
-        <hr class="hidden-sm hidden-xs">
-        <h5>FRIENDS</h5>
-        <ul class="list-inline">
             
-            <li><a target="_blank" href="https://ciat.cgiar.org/">CIAT</a></li>
-            
-        </ul>
-    </section>
-    
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-    
-    
-    <section>
-        <hr>
-        <h5>BOOKMARKS</h5>
-        <ul class="list-inline">
-            
-            <li><a target="_blank" href="https://ciat.cgiar.org/">CIAT</a></li>
-            
-            <li><a target="_blank" href="https://apariciojohan.shinyapps.io/Mrbean/">MrBean</a></li>
-            
-        </ul>
-    </section>
-    
-</div>
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/r" title="r">
+                            r
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/spats" title="spats">
+                            spats
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
 
-	</div>
-</div>
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://ciat.cgiar.org/">CIAT</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
 
 
 

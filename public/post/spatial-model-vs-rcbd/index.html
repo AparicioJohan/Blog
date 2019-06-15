@@ -15,15 +15,15 @@
     
 
     
-    <meta name="title" content="Outlier Detection in Spatial Model using SpATS" />
-    <meta property="og:title" content="Outlier Detection in Spatial Model using SpATS" />
-    <meta property="twitter:title" content="Outlier Detection in Spatial Model using SpATS" />
+    <meta name="title" content="Spatial Model vs RCBD" />
+    <meta property="og:title" content="Spatial Model vs RCBD" />
+    <meta property="twitter:title" content="Spatial Model vs RCBD" />
     
 
     
-    <meta name="description" content="Outliers in field trials">
-    <meta property="og:description" content="Outliers in field trials" />
-    <meta property="twitter:description" content="Outliers in field trials" />
+    <meta name="description" content="SpATS vs Randomized Complete Block Design">
+    <meta property="og:description" content="SpATS vs Randomized Complete Block Design" />
+    <meta property="twitter:description" content="SpATS vs Randomized Complete Block Design" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="statistic, Bean, CIAT, Bioinformatics , data, agriculture">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Outlier Detection in Spatial Model using SpATS-CIAT</title>
+    <title>Spatial Model vs RCBD-CIAT</title>
 
-    <link rel="canonical" href="/post/outlier-detection-in-spatial-model/">
+    <link rel="canonical" href="/post/spatial-model-vs-rcbd/">
 
     <link rel="stylesheet" href="/css/iDisqus.min.css"/>
 	
@@ -172,12 +172,12 @@
                             SpATS
                         </a>
                         
-                        <a class="tag" href="/tags/outliers" title="Outliers">
-                            Outliers
+                        <a class="tag" href="/tags/lme4" title="lme4">
+                            lme4
                         </a>
                         
                     </div>
-                    <h1>Outlier Detection in Spatial Model using SpATS</h1>
+                    <h1>Spatial Model vs RCBD</h1>
                     <h2 class="subheading"></h2>
                     <span class="meta">
 			Posted by 
@@ -185,7 +185,7 @@
 			    Aparicio, Johan
 			 
 			on 
-			Friday, May 10, 2019
+			Friday, June 14, 2019
                         
                     </span>
                 </div>
@@ -209,39 +209,365 @@
 
                 
                 
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
 
-<div id="example" class="section level1">
-<h1>Example</h1>
-<center>
-<img src="/img_sta/Index_Pal15C_Irri.gif" alt="Example">
-</center>
-<ul>
-<li>
-<strong>Raw Data</strong>: Display of raw data in the field.
+<style>
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
+<div id="comparacion-spats-y-rcbd" class="section level1">
+<h1>Comparación SpATS y RCBD</h1>
+<p>
+Una duda que podría surgirnos en el momento de analizar nuestros ensayos de campo es qué tan bueno puede ser un modelo que tenga en cuenta componentes espaciales, frente a un diseño experimental tradicional como lo es un diseño alfa lattice o un diseño en bloques completos al azar (RCBD). Definimos aquí el alfa lattice como un diseño en bloques completos (todos los genotipos dentro de cada bloque) y dentro de cada bloque o repetición, bloques incompletos compuestos por un subconjunto de genotipos.
+</p>
+<div id="ejemplo-con-datos-de-trigo" class="section level2">
+<h2>Ejemplo con datos de trigo</h2>
+<p>Como ejemplo se tomará un experimento de trigo bajo un diseñado en bloques completos al azar (RCBD) en el sur de Australia (<em>Gilmour et al., 1997</em>).</p>
+<table class="table table-striped table-hover table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+yield
+</th>
+<th style="text-align:left;">
+geno
+</th>
+<th style="text-align:left;">
+rep
+</th>
+<th style="text-align:right;">
+row
+</th>
+<th style="text-align:right;">
+col
+</th>
+<th style="text-align:left;">
+rowcode
+</th>
+<th style="text-align:left;">
+colcode
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+483
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+526
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+557
+</td>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+564
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+498
+</td>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+510
+</td>
+<td style="text-align:left;">
+32
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+<p>En este experimento un total de 107 variedades de trigo fueron evaluadas en 3 bloques completos, donde cada bloque consistió de 5 columnas y 22 filas en el campo (3 variedades se probaron 2 veces en cada réplica). Completando así un total de 330 surcos.</p>
+<div id="rcbd" class="section level3">
+<h3>RCBD</h3>
+<p>Se hará uso de la librería <code>lme4</code> para ajustar el modelo RCBD:</p>
+<pre class="r"><code># RCBD
+Model.lme4.1 &lt;- lmer(yield ~ 1 + (1|geno) + rep , data=wheatdata , REML = T)
+# Modelo con factores asociados a la siembra y a la cosecha
+Model.lme4.2 &lt;- lmer(yield ~ 1+(1|geno)+rep + colcode+rowcode , data=wheatdata , REML = T)</code></pre>
+<p>En este se especifica, primero, la variable respuesta, seguidamente del intercepto o media global (opcional), el genotipo como factor aleatorio y finalmente la repetición, colcode y rowcode, como factores fijos. El metodo de estimación se especifica como Maxima verosimilitud restringida (REML).</p>
+</div>
+<div id="correccion-espacial" class="section level3">
+<h3>Corrección espacial</h3>
+<p>Ahora bien, ajustaremos el modelo con corrección espacial haciendo uso de la librería <code>SpATS</code>, la sintaxis necesaria se describe a continuación:</p>
+<pre class="r"><code>wheatdata$col_f = factor(wheatdata$col)
+wheatdata$row_f = factor(wheatdata$row)
+
+ncols = length(unique(wheatdata$col))
+nrows = length(unique(wheatdata$row))</code></pre>
+<p>Con lo anterior se definen las coordenadas fila/columna como factores y el número de segmentos o nodos para el ajuste de los suavizadores Spline.</p>
+<pre class="r"><code>Model.spats.1 &lt;-SpATS(response=&#39;yield&#39;,
+            genotype=&#39;geno&#39;, genotype.as.random=T,
+            fixed=NULL ,
+            spatial = ~ PSANOVA(col, row, nseg = c(ncols,nrows),   degree=c(3,3),nest.div=2),
+            random = ~ row_f + col_f , data=wheatdata,
+            control = list(tolerance=1e-03, monitoring=0))
+# Modelo con factores asociados a la siembra y a la cosecha
+Model.spats.2 &lt;-SpATS(response=&#39;yield&#39;,
+            genotype=&#39;geno&#39;, genotype.as.random=T,
+            fixed= ~ colcode + rowcode ,
+            spatial = ~ PSANOVA(col, row, nseg = c(ncols,nrows),   degree=c(3,3),nest.div=2),
+            random = ~ row_f + col_f , data=wheatdata,
+            control = list(tolerance=1e-03, monitoring=0))</code></pre>
+</div>
+<div id="resultados" class="section level3">
+<h3>Resultados</h3>
+<p>Los gráficos que se muestran a continuación representan la descomposición de las componentes para cada uno de los modelos ajustados.</p>
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#home">RCBD</a>
 </li>
 <li>
-<strong>Fitted Spatial Trend</strong>: Two-dimensional adjusted spatial trend without including the intercept.
+<a data-toggle="tab" href="#menu1">RCBD 2</a>
 </li>
 <li>
-<strong>Fitted data</strong>: Fitted values of the model on the field.
+<a data-toggle="tab" href="#spat1">Spatial 1</a>
 </li>
 <li>
-<strong>Genotypic BLUPs</strong>: The estimation of the random effects of the genotypes evaluated.
-</li>
-<li>
-<strong>Residuals</strong>: Display of errors on the field.
-</li>
-<li>
-<strong>Histogram</strong>: Distribution of BLUPs (<em>Best Linear Unbiased Predictor</em>).
+<a data-toggle="tab" href="#spat2">Spatial 2</a>
 </li>
 </ul>
+<div class="tab-content">
+<div id="home" class="tab-pane fade in active">
+<img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 </div>
-<div id="what-happened-with-heritability" class="section level1">
-<h1>What happened with Heritability?</h1>
-<center>
-<img src="/img_sta/Heritability.gif" alt="Heritabiity">
-</center>
+<div id="menu1" class="tab-pane fade">
+<img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+</div>
+<div id="spat1" class="tab-pane fade">
+<img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+</div>
+<div id="spat2" class="tab-pane fade">
+<img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+</div>
+</div>
+<p>La tabla a continuación muestra la comparación de ambas metodologías, en cuanto al criterio de información de akaike (AIC), el R cuadrado, la varianza residual del modelo y finalmente la heredabilidad.</p>
+<table class="table table-striped table-hover table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+AIC
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+R.square
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Residual SD
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Heritability
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:right;">
+aic.lme4
+</th>
+<th style="text-align:right;">
+aic.SpATS
+</th>
+<th style="text-align:right;">
+r.lme4
+</th>
+<th style="text-align:right;">
+r.spats
+</th>
+<th style="text-align:right;">
+res.lme4
+</th>
+<th style="text-align:right;">
+res.spats
+</th>
+<th style="text-align:right;">
+h.lme4
+</th>
+<th style="text-align:right;">
+h.spats
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+4096.927
+</td>
+<td style="text-align:right;">
+3109.310
+</td>
+<td style="text-align:right;">
+0.498
+</td>
+<td style="text-align:right;">
+0.949
+</td>
+<td style="text-align:right;">
+115.45
+</td>
+<td style="text-align:right;">
+44.40
+</td>
+<td style="text-align:right;">
+0.31
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3960.924
+</td>
+<td style="text-align:right;">
+3071.424
+</td>
+<td style="text-align:right;">
+0.702
+</td>
+<td style="text-align:right;">
+0.949
+</td>
+<td style="text-align:right;">
+92.62
+</td>
+<td style="text-align:right;">
+44.15
+</td>
+<td style="text-align:right;">
+0.49
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+</tr>
+</tbody>
+</table>
+<p>De esta manera, es posible ver cuanto mejora el ajuste del modelo teniendo en cuenta el arreglo espacial. El r cuadrado, en el primer modelo, pasó de 0.49 a 0.95, comparando RCBD con SpATS. Lo que equivale aproximadamente a un aumento del 45% en el porcentaje de variabilidad explicado por el modelo. Por otro lado, la varianza residual logra reducirse considerablemente y se logra también un aumento en la heredabilidad en un 46%.</p>
+<p>Finalmente vemos cómo el incorporar los efectos adicionales de la siembra y la cosecha, disminuyen el AIC y la varianza residual, y aumentan el porcentaje de variabilidad explicado y la heredabilidad del modelo.</p>
+</div>
+</div>
 </div>
 
 
@@ -251,15 +577,10 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/post/bean/" data-toggle="tooltip" data-placement="top" title="Andean Bean">&larr;
+                        <a href="/post/guide-mr-bean/" data-toggle="tooltip" data-placement="top" title="Guide Mr.Bean">&larr;
                             Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/post/guide-mr-bean/" data-toggle="tooltip" data-placement="top" title="Guide Mr.Bean">Next
-                            Post &rarr;</a>
-                    </li>
                     
                 </ul>
 

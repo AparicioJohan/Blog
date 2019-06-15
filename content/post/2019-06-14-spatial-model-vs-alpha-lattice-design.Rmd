@@ -1,0 +1,182 @@
+---
+title: Spatial Model vs RCBD
+author: Aparicio, Johan
+date: '2019-06-14'
+slug: spatial-model-vs-RCBD
+categories:
+  - Statistics
+tags:
+  - R
+  - SpATS
+  - lme4
+subtitle: ''
+description: 'SpATS vs Randomized Complete Block Design'
+image: ''
+showtoc: false
+---
+
+```{r , include=FALSE}
+library(SpATS)
+library(kableExtra)
+library(tidyverse)
+library(lme4)
+library(data.table)
+source("https://raw.githubusercontent.com/AparicioJohan/SpATS.plus/master/All_additional.R")     # SpATS PLUS
+source("https://raw.githubusercontent.com/AparicioJohan/lme4.plus/master/heritability_Cullis.R") # Heritability
+source("https://raw.githubusercontent.com/AparicioJohan/lme4.plus/master/functions.R")           # lme4 PLUS
+source("https://raw.githubusercontent.com/AparicioJohan/lme4.plus/master/lme4_plot.R")           # lme4 Spatial plot 
+
+```
+
+
+<style>
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
+
+
+# Comparación SpATS y RCBD
+
+<p>
+Una duda que podría surgirnos en el momento de analizar nuestros ensayos de campo es qué tan bueno puede ser un modelo que tenga en cuenta componentes espaciales, frente a un diseño experimental tradicional como lo es un diseño alfa lattice o un diseño en bloques completos al azar (RCBD). Definimos aquí el alfa lattice como un diseño en bloques completos (todos los genotipos dentro de cada bloque) y dentro de cada bloque o repetición, bloques incompletos compuestos por un subconjunto de genotipos.</p>
+
+## Ejemplo con datos de trigo
+
+Como ejemplo se tomará un experimento de trigo bajo un diseñado en bloques completos al azar (RCBD) en el sur de Australia (*Gilmour et al., 1997*).
+
+
+```{r,message=FALSE,echo=FALSE}
+data(wheatdata)
+
+wheatdata$geno <- as.factor(wheatdata$geno)
+wheatdata$rep <- as.factor(wheatdata$rep)
+wheatdata$colcode <- as.factor(wheatdata$colcode)
+wheatdata$rowcode <-  as.factor(wheatdata$rowcode)
+
+head(wheatdata) %>%
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "hover",  "responsive"), full_width = F)
+```
+
+En este experimento un total de 107 variedades de trigo fueron evaluadas en 3 bloques completos, donde cada bloque consistió de 5 columnas y 22 filas en el campo (3 variedades se probaron 2 veces en cada réplica). Completando así un total de 330 surcos.
+
+### RCBD
+
+Se hará uso de la librería `lme4` para ajustar el modelo RCBD:
+
+```{r, include=FALSE}
+wheatdata <- coords(col = "col",row = "row", data = wheatdata)
+```
+
+
+```{r}
+# RCBD
+Model.lme4.1 <- lmer(yield ~ 1 + (1|geno) + rep , data=wheatdata , REML = T)
+# Modelo con factores asociados a la siembra y a la cosecha
+Model.lme4.2 <- lmer(yield ~ 1+(1|geno)+rep + colcode+rowcode , data=wheatdata , REML = T)
+```
+
+En este se especifica, primero, la variable respuesta, seguidamente del intercepto o media global (opcional), el genotipo como factor aleatorio y finalmente la repetición, colcode y rowcode, como factores fijos. El metodo de estimación se especifica como Maxima verosimilitud restringida (REML). 
+
+
+### Corrección espacial
+Ahora bien, ajustaremos el modelo con corrección espacial haciendo uso de la librería `SpATS`, la sintaxis necesaria se describe a continuación:
+
+
+```{r}
+wheatdata$col_f = factor(wheatdata$col)
+wheatdata$row_f = factor(wheatdata$row)
+
+ncols = length(unique(wheatdata$col))
+nrows = length(unique(wheatdata$row))
+```
+
+Con lo anterior se definen las coordenadas fila/columna como factores y  el número de segmentos o nodos para el ajuste de los suavizadores Spline.
+
+
+```{r}
+Model.spats.1 <-SpATS(response='yield',
+            genotype='geno', genotype.as.random=T,
+            fixed=NULL ,
+            spatial = ~ PSANOVA(col, row, nseg = c(ncols,nrows),   degree=c(3,3),nest.div=2),
+            random = ~ row_f + col_f , data=wheatdata,
+            control = list(tolerance=1e-03, monitoring=0))
+# Modelo con factores asociados a la siembra y a la cosecha
+Model.spats.2 <-SpATS(response='yield',
+            genotype='geno', genotype.as.random=T,
+            fixed= ~ colcode + rowcode ,
+            spatial = ~ PSANOVA(col, row, nseg = c(ncols,nrows),   degree=c(3,3),nest.div=2),
+            random = ~ row_f + col_f , data=wheatdata,
+            control = list(tolerance=1e-03, monitoring=0))
+```
+
+### Resultados
+
+Los gráficos que se muestran a continuación representan la descomposición de las componentes para cada uno de los modelos ajustados. 
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">RCBD</a></li>
+  <li><a data-toggle="tab" href="#menu1">RCBD 2</a></li>
+  <li><a data-toggle="tab" href="#spat1">Spatial 1</a></li>
+  <li><a data-toggle="tab" href="#spat2">Spatial 2</a></li>
+</ul>
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+```{r, echo=FALSE}
+lme4.plot(x = Model.lme4.1,Datos = wheatdata,gen = "geno")
+```
+  </div>
+  <div id="menu1" class="tab-pane fade">
+```{r, echo=FALSE}
+lme4.plot(x = Model.lme4.2,Datos = wheatdata,gen = "geno")
+```
+  </div>
+  <div id="spat1" class="tab-pane fade">
+```{r, echo=FALSE}
+plot(Model.spats.1)
+```
+  </div>
+  <div id="spat2" class="tab-pane fade">
+```{r, echo=FALSE}
+plot(Model.spats.2)
+```
+  </div>
+</div>
+
+
+
+
+
+```{r, include=FALSE}
+aic.lme4 <- c(AIC(Model.lme4.1),AIC(Model.lme4.2))
+r.lme4 <- c(r.lme4(Model.lme4.1),r.lme4(Model.lme4.2))
+res.lme4 <- c(round(summary(Model.lme4.1)$sigma,2),round(summary(Model.lme4.2)$sigma,2))
+h.lme4 <- round(c(Heri.cullis(Model.lme4.1,"geno"),Heri.cullis(Model.lme4.2,"geno")),2)
+
+aic.SpATS <- c(AIC.SpATS(Model.spats.1),AIC.SpATS(Model.spats.2))
+r.spats <- c(R.square(Model.spats.1),R.square(Model.spats.2))
+res.spats <-  round(sqrt(c(Model.spats.1$psi[1],Model.spats.2$psi[1])),2)
+h.spats <- c(getHeritability(Model.spats.1),getHeritability(Model.spats.2))
+
+Final <- data.frame(aic.lme4,aic.SpATS,
+                    r.lme4,r.spats,
+                    res.lme4,res.spats,
+                    h.lme4,h.spats)
+```
+
+
+La tabla a continuación muestra la comparación de ambas metodologías, en cuanto al criterio de información de akaike (AIC), el R cuadrado, la varianza residual del modelo y finalmente la heredabilidad.
+
+```{r , echo=FALSE}
+Final %>%
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped", "hover",  "responsive"), full_width = F) %>% add_header_above(c( "AIC" = 2, "R.square" = 2, "Residual SD" = 2, "Heritability"=2))
+```
+
+
+De esta manera, es posible ver cuanto mejora el ajuste del modelo teniendo en cuenta el arreglo espacial. El r cuadrado, en el primer modelo, pasó  de 0.49 a 0.95, comparando RCBD con SpATS. Lo que equivale aproximadamente a un aumento del 45% en el porcentaje de variabilidad explicado por el modelo. Por otro lado, la varianza residual logra reducirse considerablemente y se logra también un aumento en la heredabilidad en un 46%.
+
+Finalmente vemos cómo el incorporar los efectos adicionales de la siembra y la cosecha, disminuyen el AIC y la varianza residual, y aumentan el porcentaje de variabilidad explicado y la heredabilidad del modelo.
+

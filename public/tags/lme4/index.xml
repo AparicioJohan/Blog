@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Bean Blog</title>
-    <link>/tags/r/</link>
-    <description>Recent content in R on Bean Blog</description>
+    <title>lme4 on Bean Blog</title>
+    <link>/tags/lme4/</link>
+    <description>Recent content in lme4 on Bean Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/lme4/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>/post/spatial-model-vs-rcbd/</guid>
       <description>p {text-align: justify;text-justify: inter-word;}Comparación SpATS y RCBDUna duda que podría surgirnos en el momento de analizar nuestros ensayos de campo es qué tan bueno puede ser un modelo que tenga en cuenta componentes espaciales, frente a un diseño experimental tradicional como lo es un diseño alfa lattice o un diseño en bloques completos al azar (RCBD). Definimos aquí el alfa lattice como un diseño en bloques completos (todos los genotipos dentro de cada bloque) y dentro de cada bloque o repetición, bloques incompletos compuestos por un subconjunto de genotipos.</description>
-    </item>
-    
-    <item>
-      <title>Outlier Detection in Spatial Model using SpATS</title>
-      <link>/post/outlier-detection-in-spatial-model/</link>
-      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/outlier-detection-in-spatial-model/</guid>
-      <description>ExampleRaw Data: Display of raw data in the field.Fitted Spatial Trend: Two-dimensional adjusted spatial trend without including the intercept.Fitted data: Fitted values of the model on the field.Genotypic BLUPs: The estimation of the random effects of the genotypes evaluated.Residuals: Display of errors on the field.Histogram: Distribution of BLUPs (Best Linear Unbiased Predictor).</description>
     </item>
     
   </channel>
