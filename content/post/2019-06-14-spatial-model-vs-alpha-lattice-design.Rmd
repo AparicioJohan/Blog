@@ -38,16 +38,16 @@ p {
 </style>
 
 
-# Comparación SpATS y RCBD
+# Modelo espacial vs Modelos clásicos
 
 <p>
-Una duda que podría surgirnos en el momento de analizar nuestros ensayos de campo es qué tan bueno puede ser un modelo que tenga en cuenta componentes espaciales, frente a un diseño experimental tradicional como lo es un diseño alfa lattice o un diseño en bloques completos al azar (RCBD). Definimos aquí el alfa lattice como un diseño en bloques completos (todos los genotipos dentro de cada bloque) y dentro de cada bloque o repetición, bloques incompletos compuestos por un subconjunto de genotipos.</p>
+Una duda que podría surgirnos en el momento de analizar nuestros ensayos de campo es qué tan bueno puede ser un modelo que tenga en cuenta componentes espaciales, frente a un diseño experimental tradicional como lo es un *diseño completamente al azar* (**CRD**), un *diseño en bloques completos al azar* (**RCBD**) o un  *diseño alfa lattice* . Definimos aquí el alfa lattice como un diseño en bloques completos (todos los genotipos dentro de cada bloque) y dentro de cada bloque o repetición, bloques incompletos compuestos por un subconjunto de genotipos.</p>
 
 
 
 ## Ejemplo con datos de fríjol
 
-Como ejemplo se tomarán datos de Darien en el añó 2016 bajo condiciones de sequía. En este se evaluaron un total de 380 lineas en dos repeticiones, con 18 bloques incompletos dentro de cada una.
+Como ejemplo se tomarán datos de **Darien** en el añó 2016 bajo condiciones de **sequía**. En este se evaluaron un total de **380** lineas en dos repeticiones, con 18 bloques incompletos dentro de cada una.
 
 
 ```{r,message=FALSE,echo=FALSE,warning=FALSE}
@@ -72,7 +72,7 @@ head(Datos) %>%
 ```
 
 
-Con el objetivo de completar el campo algunos genotipos (AFR_298, AFR_722, CAL_096, CAL_143, DAA_153, DAB_251, DAB_295, DAB_494, DAB_614, DAB_932, RAA_034, SAB_560, SAB_659, SAB_686, SEQ_1003, TIO_CANELA_75), fueron replicados 4 veces, completando así un total de 792 observaciones.
+Con el objetivo de completar el campo algunos genotipos (*AFR_298, AFR_722, CAL_096, CAL_143, DAA_153, DAB_251, DAB_295, DAB_494, DAB_614, DAB_932, RAA_034, SAB_560, SAB_659, SAB_686, SEQ_1003, TIO_CANELA_75*), fueron replicados 4 veces, completando así un total de **792** observaciones.
 
 <center>
 ```{r, echo=FALSE,fig.cap="Blocks in the field",include=TRUE }
@@ -99,8 +99,10 @@ Datos$blo_in_rep <- with(Datos,rep:block)
 
 # Completely Randomized Designs  (CRD)
 g.ran <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line), REML = T )
+
 # Randomized Complete Block Designs (RCBD)
 g.ran2 <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep, REML = T )
+
 # Alpha-lattice
 g.ran3 <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep+ (1|blo_in_rep), REML = T )
 ```
@@ -146,9 +148,9 @@ d.sum %>%
 
 ```
 
-La tabla 2 muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r^2^ y la Heredabilidad aumentaron aproximadamente en un 15% y 11%, respectivamente, y la varianza residual logró reducirse de 281.91 a 225.38.
+La **tabla 2** muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r^2^ y la Heredabilidad aumentaron aproximadamente en un **42%** y **23%**, respectivamente, y la desviación estándar residual logró reducirse de **358.73** a **225.38**.
 
-Finalmente, de manera gráfica miraremos qué sucede cuando se ajusta el diseño alpha-lattice a los datos, y qué sucede cuando se ajusta el modelo espacial.
+Finalmente, de manera gráfica miraremos qué sucede cuando se ajusta cada uno de los diseños finalizando con el ajuste del modelo espacial.
 
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#dca">CRD</a></li>

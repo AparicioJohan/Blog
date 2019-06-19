@@ -260,14 +260,14 @@ p {
   text-justify: inter-word;
 }
 </style>
-<div id="comparacion-spats-y-rcbd" class="section level1">
-<h1>Comparación SpATS y RCBD</h1>
+<div id="modelo-espacial-vs-modelos-clasicos" class="section level1">
+<h1>Modelo espacial vs Modelos clásicos</h1>
 <p>
-Una duda que podría surgirnos en el momento de analizar nuestros ensayos de campo es qué tan bueno puede ser un modelo que tenga en cuenta componentes espaciales, frente a un diseño experimental tradicional como lo es un diseño alfa lattice o un diseño en bloques completos al azar (RCBD). Definimos aquí el alfa lattice como un diseño en bloques completos (todos los genotipos dentro de cada bloque) y dentro de cada bloque o repetición, bloques incompletos compuestos por un subconjunto de genotipos.
+Una duda que podría surgirnos en el momento de analizar nuestros ensayos de campo es qué tan bueno puede ser un modelo que tenga en cuenta componentes espaciales, frente a un diseño experimental tradicional como lo es un <em>diseño completamente al azar</em> (<strong>CRD</strong>), un <em>diseño en bloques completos al azar</em> (<strong>RCBD</strong>) o un <em>diseño alfa lattice</em> . Definimos aquí el alfa lattice como un diseño en bloques completos (todos los genotipos dentro de cada bloque) y dentro de cada bloque o repetición, bloques incompletos compuestos por un subconjunto de genotipos.
 </p>
 <div id="ejemplo-con-datos-de-frijol" class="section level2">
 <h2>Ejemplo con datos de fríjol</h2>
-<p>Como ejemplo se tomarán datos de Darien en el añó 2016 bajo condiciones de sequía. En este se evaluaron un total de 380 lineas en dos repeticiones, con 18 bloques incompletos dentro de cada una.</p>
+<p>Como ejemplo se tomarán datos de <strong>Darien</strong> en el añó 2016 bajo condiciones de <strong>sequía</strong>. En este se evaluaron un total de <strong>380</strong> lineas en dos repeticiones, con 18 bloques incompletos dentro de cada una.</p>
 <table class="table table-striped table-hover table-responsive table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:unnamed-chunk-2">Table 1: </span>Head data from Dar16C_drt
@@ -480,7 +480,7 @@ DAN_003
 </tr>
 </tbody>
 </table>
-<p>Con el objetivo de completar el campo algunos genotipos (AFR_298, AFR_722, CAL_096, CAL_143, DAA_153, DAB_251, DAB_295, DAB_494, DAB_614, DAB_932, RAA_034, SAB_560, SAB_659, SAB_686, SEQ_1003, TIO_CANELA_75), fueron replicados 4 veces, completando así un total de 792 observaciones.</p>
+<p>Con el objetivo de completar el campo algunos genotipos (<em>AFR_298, AFR_722, CAL_096, CAL_143, DAA_153, DAB_251, DAB_295, DAB_494, DAB_614, DAB_932, RAA_034, SAB_560, SAB_659, SAB_686, SEQ_1003, TIO_CANELA_75</em>), fueron replicados 4 veces, completando así un total de <strong>792</strong> observaciones.</p>
 <center>
 <div class="figure"><span id="fig:unnamed-chunk-3"></span>
 <div id="htmlwidget-1" style="width:400px;height:600px;" class="highchart html-widget"></div>
@@ -495,8 +495,10 @@ Figure 1: Blocks in the field
 
 # Completely Randomized Designs  (CRD)
 g.ran &lt;- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line), REML = T )
+
 # Randomized Complete Block Designs (RCBD)
 g.ran2 &lt;- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep, REML = T )
+
 # Alpha-lattice
 g.ran3 &lt;- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep+ (1|blo_in_rep), REML = T )</code></pre>
 <pre class="r"><code># SpATS
@@ -616,8 +618,8 @@ SpATS
 </tr>
 </tbody>
 </table>
-<p>La tabla 2 muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r<sup>2</sup> y la Heredabilidad aumentaron aproximadamente en un 15% y 11%, respectivamente, y la varianza residual logró reducirse de 281.91 a 225.38.</p>
-<p>Finalmente, de manera gráfica miraremos qué sucede cuando se ajusta el diseño alpha-lattice a los datos, y qué sucede cuando se ajusta el modelo espacial.</p>
+<p>La <strong>tabla 2</strong> muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r<sup>2</sup> y la Heredabilidad aumentaron aproximadamente en un <strong>42%</strong> y <strong>23%</strong>, respectivamente, y la desviación estándar residual logró reducirse de <strong>358.73</strong> a <strong>225.38</strong>.</p>
+<p>Finalmente, de manera gráfica miraremos qué sucede cuando se ajusta cada uno de los diseños finalizando con el ajuste del modelo espacial.</p>
 <ul class="nav nav-tabs">
 <li class="active">
 <a data-toggle="tab" href="#dca">CRD</a>
