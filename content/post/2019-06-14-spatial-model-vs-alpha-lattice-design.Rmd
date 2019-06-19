@@ -1,5 +1,5 @@
 ---
-title: Spatial Model vs RCBD
+title: Spatial Model vs Classical Designs
 author: Aparicio, Johan
 date: '2019-06-14'
 slug: spatial-model-vs-RCBD
@@ -10,7 +10,7 @@ tags:
   - SpATS
   - lme4
 subtitle: ''
-description: 'SpATS vs Randomized Complete Block Design'
+description: 'SpATS - CRD - RCBD - Alpha Lattice'
 image: ''
 showtoc: false
 ---
@@ -47,7 +47,7 @@ Una duda que podría surgirnos en el momento de analizar nuestros ensayos de cam
 
 ## Ejemplo con datos de fríjol
 
-Como ejemplo se tomarán datos de Darien en el añó 2016 bajo condiciones de sequía. En este se evaluaron un total de 380 lineas en dos repeticiones con 18 bloques incompletos.
+Como ejemplo se tomarán datos de Darien en el añó 2016 bajo condiciones de sequía. En este se evaluaron un total de 380 lineas en dos repeticiones, con 18 bloques incompletos dentro de cada una.
 
 
 ```{r,message=FALSE,echo=FALSE,warning=FALSE}
@@ -72,7 +72,7 @@ head(Datos) %>%
 ```
 
 
-Siendo estos genotipos: AFR_298, AFR_722, CAL_096, CAL_143, DAA_153, DAB_251, DAB_295, DAB_494, DAB_614, DAB_932, RAA_034, SAB_560, SAB_659, SAB_686, SEQ_1003, TIO_CANELA_75, replicados 4 veces, completando así un total de 792 observaciones.
+Con el objetivo de completar el campo algunos genotipos (AFR_298, AFR_722, CAL_096, CAL_143, DAA_153, DAB_251, DAB_295, DAB_494, DAB_614, DAB_932, RAA_034, SAB_560, SAB_659, SAB_686, SEQ_1003, TIO_CANELA_75), fueron replicados 4 veces, completando así un total de 792 observaciones.
 
 <center>
 ```{r, echo=FALSE,fig.cap="Blocks in the field",include=TRUE }
@@ -84,7 +84,7 @@ hchart(Datos, "scatter", hcaes(x = col, y = row, group = block)) %>%
 ```
 </center>
 
-Ahora bien, se ajustará primero el modelo alpha-lattice haciendo uso de la librería `lme4` y el modelo espacial haciendo uso de `SpATS`. A continuación se muestra la sintaxis necesaria para ajustar los modelos.
+Ahora bien, se ajustará primero los modelos tradicionales haciendo uso de la librería `lme4` y el modelo espacial haciendo uso de `SpATS`. A continuación se muestra la sintaxis necesaria para ajustar los modelos.
 
 ```{r, echo=FALSE}
 Datos <- coords(col="col",row="row",Datos)
@@ -96,10 +96,16 @@ nrows = length(unique(Datos$row))
 
 ```{r}
 Datos$blo_in_rep <- with(Datos,rep:block)
-# alpha-lattice design
+
+# Completely Randomized Designs  (CRD)
 g.ran <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line), REML = T )
+# Randomized Complete Block Designs (RCBD)
 g.ran2 <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep, REML = T )
+# Alpha-lattice
 g.ran3 <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep+ (1|blo_in_rep), REML = T )
+```
+
+```{r}
 # SpATS
 Modelo=SpATS(response='YdHa',
              genotype='line', genotype.as.random=T,
@@ -108,6 +114,7 @@ Modelo=SpATS(response='YdHa',
              random = ~ row_f + col_f , data=Datos,
              control = list(tolerance=1e-03, monitoring=0))
 ```
+
 
 Como medidas de comparación se hará uso de los criterio de información (AIC, BIC), la varianza residual del modelo, el r^2^ y finalmente la heredabilidad.
 
@@ -139,15 +146,15 @@ d.sum %>%
 
 ```
 
-La tabla 2 muestra cómo en todos los criterios se obtienen mejores resultados entre ambas metodologías. El AIC y el BIC fueron más bajos en SpATS, el r^2^ y la Heredabilidad aumentaron aproximadamente en un 15% y 11% y la varianza residual logró reducirse de 281.91 a 225.38.
+La tabla 2 muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r^2^ y la Heredabilidad aumentaron aproximadamente en un 15% y 11%, respectivamente, y la varianza residual logró reducirse de 281.91 a 225.38.
 
 Finalmente, de manera gráfica miraremos qué sucede cuando se ajusta el diseño alpha-lattice a los datos, y qué sucede cuando se ajusta el modelo espacial.
 
 <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#dca">RCD</a></li>
+  <li class="active"><a data-toggle="tab" href="#dca">CRD</a></li>
   <li><a data-toggle="tab" href="#rcbd">RCBD</a></li>
-  <li><a data-toggle="tab" href="#alfa">Alpha</a></li>
-  <li><a data-toggle="tab" href="#spt">SpATS</a></li>
+  <li><a data-toggle="tab" href="#alfa">Alpha-Lattice</a></li>
+  <li><a data-toggle="tab" href="#spt">Spatial-Model</a></li>
 </ul>
 <div class="tab-content">
   <div id="dca" class="tab-pane fade in active">
