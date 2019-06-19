@@ -150,7 +150,7 @@ d.sum %>%
 
 La **tabla 2** muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r^2^ y la Heredabilidad aumentaron aproximadamente en un **42%** y **23%**, respectivamente, y la desviación estándar residual logró reducirse de **358.73** a **225.38**.
 
-Finalmente, de manera gráfica miraremos qué sucede cuando se ajusta cada uno de los diseños finalizando con el ajuste del modelo espacial.
+Finalmente, de manera gráfica miraremos qué sucede espacialmente cuando se ajusta cada uno de los diseños, finalizando con el ajuste del modelo espacial.
 
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#dca">CRD</a></li>
@@ -160,22 +160,22 @@ Finalmente, de manera gráfica miraremos qué sucede cuando se ajusta cada uno d
 </ul>
 <div class="tab-content">
   <div id="dca" class="tab-pane fade in active">
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.cap="Completely Randomized Designs  (CRD)"}
 lme4.plot(x = g.ran,Datos = Datos,gen = "line")
 ```
   </div>
   <div id="rcbd" class="tab-pane fade">
-```{r, echo=FALSE}
+```{r, echo=FALSE,fig.cap="Randomized Complete Block Designs (RCBD)"}
 lme4.plot(x = g.ran2,Datos = Datos,gen = "line")
 ```
   </div>
   <div id="alfa" class="tab-pane fade">
-```{r, echo=FALSE}
+```{r, echo=FALSE,fig.cap="Alpha-Lattice Design"}
 lme4.plot(x = g.ran3,Datos = Datos,gen = "line")
 ```
   </div>
   <div id="spt" class="tab-pane fade">
-```{r, echo=FALSE}
+```{r, echo=FALSE,fig.cap="Spatial model with SpATS"}
 plot(Modelo)
 ```
   </div>
