@@ -50,8 +50,10 @@ Una duda que podría surgirnos en el momento de analizar nuestros ensayos de cam
 Como ejemplo se tomarán datos de Darien en el añó 2016 bajo condiciones de sequía. En este se evaluaron un total de 380 lineas en dos repeticiones con 18 bloques incompletos.
 
 
-```{r,message=FALSE,echo=FALSE}
-Datos <- read.csv("D:/APARICIO JOHAN/CGIAR/Ariza, Daniel (CIAT) - Johan/VEF_raw_data/all_merged_to_send_clean.csv")
+```{r,message=FALSE,echo=FALSE,warning=FALSE}
+library(RCurl)
+x <- getURL("https://raw.githubusercontent.com/AparicioJohan/SpATS.plus/master/all_merged_to_send_clean.csv")
+Datos <- read.csv( text = x)
 Datos <- droplevels(subset(Datos, dataset=="Dar16C_hiP"))
 
 Datos$line <- as.factor(Datos$line)
@@ -66,20 +68,21 @@ rownames(Datos) <- 1:nrow(Datos)
 
 head(Datos) %>%
   kable(align = "c",caption = "Head data from Dar16C_drt") %>% 
-  kable_styling(bootstrap_options = c("striped", "hover","responsive"), full_width = F)
+  kable_styling(bootstrap_options = c("striped", "hover","responsive","condensed"), full_width = F)
 ```
 
 
 Siendo estos genotipos: AFR_298, AFR_722, CAL_096, CAL_143, DAA_153, DAB_251, DAB_295, DAB_494, DAB_614, DAB_932, RAA_034, SAB_560, SAB_659, SAB_686, SEQ_1003, TIO_CANELA_75, replicados 4 veces, completando así un total de 792 observaciones.
 
-```{r, echo=FALSE,fig.align='center',fig.height=2, fig.width=2,fig.cap="Blocks in the field" }
+<center>
+```{r, echo=FALSE,fig.cap="Blocks in the field",include=TRUE }
 hchart(Datos, "scatter", hcaes(x = col, y = row, group = block)) %>% 
   hc_title(text = "<bold>This is the spatial visualization</bold>",
            margin = 20, align = "left",
            style = list(color = "black", useHTML = TRUE))%>%  hc_yAxis(max = 65)  %>% 
-   hc_add_theme(hc_theme_smpl())
+   hc_add_theme(hc_theme_smpl()) %>%  hc_size(400, 600)
 ```
-
+</center>
 
 Ahora bien, se ajustará primero el modelo alpha-lattice haciendo uso de la librería `lme4` y el modelo espacial haciendo uso de `SpATS`. A continuación se muestra la sintaxis necesaria para ajustar los modelos.
 
@@ -94,7 +97,9 @@ nrows = length(unique(Datos$row))
 ```{r}
 Datos$blo_in_rep <- with(Datos,rep:block)
 # alpha-lattice design
-g.ran <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep+ (1|blo_in_rep), REML = T )
+g.ran <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line), REML = T )
+g.ran2 <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep, REML = T )
+g.ran3 <- lmer(data   = Datos , formula = YdHa ~ 1 + (1|line) + rep+ (1|blo_in_rep), REML = T )
 # SpATS
 Modelo=SpATS(response='YdHa',
              genotype='line', genotype.as.random=T,
@@ -107,17 +112,17 @@ Modelo=SpATS(response='YdHa',
 Como medidas de comparación se hará uso de los criterio de información (AIC, BIC), la varianza residual del modelo, el r^2^ y finalmente la heredabilidad.
 
 ```{r, echo=FALSE}
-aic    <- c(AIC(g.ran),AIC(Modelo))
-bic    <- c(BIC(g.ran),BIC(Modelo))
-r.2    <- c(r.lme4(g.ran),R.square(Modelo))
-heri   <- round(c(Heri.cullis(g.ran,"line"),getHeritability(Modelo)),3)
-var.r  <- round(c(summary(g.ran)$sigma,sqrt(Modelo$psi[1])),2)
-Models <- c("Alpha","SpATS")
+aic    <- c(AIC(g.ran),AIC(g.ran2),AIC(g.ran3),AIC(Modelo))
+bic    <- c(BIC(g.ran),BIC(g.ran2),BIC(g.ran3),BIC(Modelo))
+r.2    <- c(r.lme4(g.ran),r.lme4(g.ran2),r.lme4(g.ran3),R.square(Modelo))
+heri   <- round(c(Heri.cullis(g.ran,"line"),Heri.cullis(g.ran2,"line"),Heri.cullis(g.ran3,"line"),getHeritability(Modelo)),3)
+var.r  <- round(c(summary(g.ran)$sigma,summary(g.ran2)$sigma,summary(g.ran3)$sigma,sqrt(Modelo$psi[1])),2)
+Models <- c("DCA","RCBD","Alpha","SpATS")
 d.sum  <- data.frame(Models,aic,bic,r.2,heri,var.r)
 ```
 
 
-```{r , echo=FALSE}
+```{r , echo=FALSE,warning=FALSE}
 library(formattable)
 d.sum %>% 
    mutate(
@@ -130,7 +135,7 @@ d.sum %>%
   ) %>% 
    select(Models, everything()) %>%
   kable(escape = F, align = "c",caption = "Summary comparison") %>%
-  kable_styling("hover", full_width = F)
+  kable_styling(c("hover","responsive","condensed"), full_width = F)
 
 ```
 
@@ -139,13 +144,25 @@ La tabla 2 muestra cómo en todos los criterios se obtienen mejores resultados e
 Finalmente, de manera gráfica miraremos qué sucede cuando se ajusta el diseño alpha-lattice a los datos, y qué sucede cuando se ajusta el modelo espacial.
 
 <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#rcbd">RCBD</a></li>
+  <li class="active"><a data-toggle="tab" href="#dca">RCD</a></li>
+  <li><a data-toggle="tab" href="#rcbd">RCBD</a></li>
+  <li><a data-toggle="tab" href="#alfa">Alpha</a></li>
   <li><a data-toggle="tab" href="#spt">SpATS</a></li>
 </ul>
 <div class="tab-content">
-  <div id="rcbd" class="tab-pane fade in active">
+  <div id="dca" class="tab-pane fade in active">
 ```{r, echo=FALSE}
 lme4.plot(x = g.ran,Datos = Datos,gen = "line")
+```
+  </div>
+  <div id="rcbd" class="tab-pane fade">
+```{r, echo=FALSE}
+lme4.plot(x = g.ran2,Datos = Datos,gen = "line")
+```
+  </div>
+  <div id="alfa" class="tab-pane fade">
+```{r, echo=FALSE}
+lme4.plot(x = g.ran3,Datos = Datos,gen = "line")
 ```
   </div>
   <div id="spt" class="tab-pane fade">
