@@ -2,15 +2,16 @@
 title: Spatial Model vs Classical Designs
 author: Aparicio, Johan
 date: '2019-06-14'
-slug: spatial-model-vs-RCBD
+slug: spatial-model-vs-classical
 categories:
   - Statistics
 tags:
   - R
   - SpATS
   - lme4
+  - asreml
 subtitle: ''
-description: 'SpATS - CRD - RCBD - Alpha Lattice'
+description: 'SpATS - CRD - RCBD - Alpha Lattice - ASreml'
 image: ''
 showtoc: false
 ---
@@ -22,10 +23,13 @@ library(tidyverse)
 library(lme4)
 library(data.table)
 library(highcharter)
+library(asreml)
+library(asremlPlus)
 source("https://raw.githubusercontent.com/AparicioJohan/SpATS.plus/master/All_additional.R")     # SpATS PLUS
 source("https://raw.githubusercontent.com/AparicioJohan/lme4.plus/master/heritability_Cullis.R") # Heritability
 source("https://raw.githubusercontent.com/AparicioJohan/lme4.plus/master/functions.R")           # lme4 PLUS
 source("https://raw.githubusercontent.com/AparicioJohan/lme4.plus/master/lme4_plot.R")           # lme4 Spatial plot 
+source("https://raw.githubusercontent.com/AparicioJohan/asreml.plus/master/All.asreml.R")        # asreml heritability
 
 ```
 
@@ -84,7 +88,7 @@ hchart(Datos, "scatter", hcaes(x = col, y = row, group = block)) %>%
 ```
 </center>
 
-Ahora bien, se ajustará primero los modelos tradicionales haciendo uso de la librería `lme4` y el modelo espacial haciendo uso de `SpATS`. A continuación se muestra la sintaxis necesaria para ajustar los modelos.
+Ahora bien, se ajustará primero los modelos tradicionales haciendo uso de la librería `lme4` y los modelo espaciales haciendo uso de `SpATS` y  `asreml`. A continuación se muestra la sintaxis necesaria para ajustar los modelos.
 
 ```{r, echo=FALSE}
 Datos <- coords(col="col",row="row",Datos)
@@ -118,15 +122,34 @@ Modelo=SpATS(response='YdHa',
 ```
 
 
+```{r}
+Datos <- arrange(Datos,col,row)
+
+# Filas anidadas en las columnas
+fit.asreml<- asreml( fixed = YdHa ~  1 +   lin(col) ,
+                             random  = ~ line + row_f + spl(row) + spl(col)+ units  , 
+                             data    = Datos, 
+                             rcov    = ~ ar1(col_f):ar1(row_f), 
+                             maxiter = 100, 
+                             trace = FALSE, na.method.X = "include", na.method.Y = "include")
+```
+
+
+
 Como medidas de comparación se hará uso de los criterio de información (AIC, BIC), la varianza residual del modelo, el r^2^ y finalmente la heredabilidad.
 
 ```{r, echo=FALSE}
-aic    <- c(AIC(g.ran),AIC(g.ran2),AIC(g.ran3),AIC(Modelo))
-bic    <- c(BIC(g.ran),BIC(g.ran2),BIC(g.ran3),BIC(Modelo))
-r.2    <- c(r.lme4(g.ran),r.lme4(g.ran2),r.lme4(g.ran3),R.square(Modelo))
-heri   <- round(c(Heri.cullis(g.ran,"line"),Heri.cullis(g.ran2,"line"),Heri.cullis(g.ran3,"line"),getHeritability(Modelo)),3)
-var.r  <- round(c(summary(g.ran)$sigma,summary(g.ran2)$sigma,summary(g.ran3)$sigma,sqrt(Modelo$psi[1])),2)
-Models <- c("DCA","RCBD","Alpha","SpATS")
+aic    <- c(AIC(g.ran),AIC(g.ran2),AIC(g.ran3),AIC(Modelo),infoCriteria.asreml(fit.asreml)[["AIC"]])
+bic    <- c(BIC(g.ran),BIC(g.ran2),BIC(g.ran3),BIC(Modelo),infoCriteria.asreml(fit.asreml)[["BIC"]])
+r.2    <- c(r.lme4(g.ran),r.lme4(g.ran2),r.lme4(g.ran3),R.square(Modelo),r.asreml(fit.asreml,Datos,response = "YdHa"))
+heri   <- round(c(Heri.cullis(g.ran,"line"),
+                  Heri.cullis(g.ran2,"line"),
+                  Heri.cullis(g.ran3,"line"),
+                  getHeritability(Modelo), 
+                  Heri.AR.AR(fit.asreml,Genotype = "line") ),3)
+var.r  <- round(c(summary(g.ran)$sigma,summary(g.ran2)$sigma,summary(g.ran3)$sigma,
+                  sqrt(Modelo$psi[1]),sqrt(fit.asreml$sigma2)),2)
+Models <- c("DCA","RCBD","Alpha","SpATS","ASreml")
 d.sum  <- data.frame(Models,aic,bic,r.2,heri,var.r)
 ```
 
@@ -156,7 +179,8 @@ Finalmente, de manera gráfica miraremos qué sucede espacialmente cuando se aju
   <li class="active"><a data-toggle="tab" href="#dca">CRD</a></li>
   <li><a data-toggle="tab" href="#rcbd">RCBD</a></li>
   <li><a data-toggle="tab" href="#alfa">Alpha-Lattice</a></li>
-  <li><a data-toggle="tab" href="#spt">Spatial-Model</a></li>
+  <li><a data-toggle="tab" href="#spt">SpATS-Model</a></li>
+  <li><a data-toggle="tab" href="#asre">ASreml-Model</a></li>
 </ul>
 <div class="tab-content">
   <div id="dca" class="tab-pane fade in active">
@@ -177,6 +201,11 @@ lme4.plot(x = g.ran3,Datos = Datos,gen = "line")
   <div id="spt" class="tab-pane fade">
 ```{r, echo=FALSE,fig.cap="Spatial model with SpATS"}
 plot(Modelo)
+```
+  </div>
+  <div id="asre" class="tab-pane fade">
+```{r, echo=FALSE,fig.cap="Spatial model with ASReml"}
+plot.spatial.asreml(fit.asreml,Datos,res = "YdHa",gen = "line")
 ```
   </div>
 </div>
