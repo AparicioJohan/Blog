@@ -173,7 +173,7 @@ d.sum %>%
 
 La **tabla 2** muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r^2^ y la Heredabilidad aumentaron aproximadamente en un **42%** y **23%**, respectivamente, y la desviación estándar residual logró reducirse de **358.73** a **225.38**.
 
-Finalmente, de manera gráfica miraremos qué sucede espacialmente cuando se ajusta cada uno de los diseños, finalizando con el ajuste del modelo espacial.
+Finalmente, de manera gráfica miraremos qué sucede espacialmente cuando se ajusta cada uno de los diseños, finalizando con la matriz de correlaciones de los efectos genéticos entre modelos.
 
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#dca">CRD</a></li>
@@ -209,6 +209,24 @@ plot.spatial.asreml(fit.asreml,Datos,res = "YdHa",gen = "line")
 ```
   </div>
 </div>
+
+
+Las correlaciones vendrían dadas por:
+
+
+```{r, echo=FALSE, warning=FALSE, fig.align='center',fig.width=4,fig.height=3, message=FALSE, fig.cap="Matriz with correlations"}
+source("https://raw.githubusercontent.com/darizasu/work/master/scripts/ggCor.R")
+library(ggplot2)
+library(psych)
+b1 <- ranef(g.ran)$line
+b2 <- ranef(g.ran2)$line
+b3 <- ranef(g.ran3)$line
+b4 <- predict(Modelo,which="line")[,"predicted.values"]
+b5 <- predict(fit.asreml,classify = "line", only = "line")$predictions$pvals[,"predicted.value"]
+
+t.b <- data.frame(DCA=b1$`(Intercept)`,RCBD=b2$`(Intercept)`,Alpha=b3$`(Intercept)`,SpATS=b4,ASReml=b5)
+ggCor(t.b,colours = c("#db4437","white","#4285f4")) 
+```
 
 
 

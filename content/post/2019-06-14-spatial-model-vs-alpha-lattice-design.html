@@ -455,7 +455,7 @@ ASreml
 </tbody>
 </table>
 <p>La <strong>tabla 2</strong> muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r<sup>2</sup> y la Heredabilidad aumentaron aproximadamente en un <strong>42%</strong> y <strong>23%</strong>, respectivamente, y la desviación estándar residual logró reducirse de <strong>358.73</strong> a <strong>225.38</strong>.</p>
-<p>Finalmente, de manera gráfica miraremos qué sucede espacialmente cuando se ajusta cada uno de los diseños, finalizando con el ajuste del modelo espacial.</p>
+<p>Finalmente, de manera gráfica miraremos qué sucede espacialmente cuando se ajusta cada uno de los diseños, finalizando con la matriz de correlaciones de los efectos genéticos entre modelos.</p>
 <ul class="nav nav-tabs">
 <li class="active">
 <a data-toggle="tab" href="#dca">CRD</a>
@@ -515,13 +515,20 @@ Figure 6: Spatial model with ASReml
 </div>
 </div>
 </div>
+<p>Las correlaciones vendrían dadas por:</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-15-1.png" alt="Matriz with correlations" width="384" />
+<p class="caption">
+Figure 7: Matriz with correlations
+</p>
+</div>
 </div>
 <div id="ejemplo-con-datos-de-trigo" class="section level2">
 <h2>Ejemplo con datos de trigo</h2>
 <p>Como ejemplo se tomará un experimento de trigo bajo un diseñado en bloques completos al azar (RCBD) en el sur de Australia (<em>Gilmour et al., 1997</em>).</p>
 <table class="table table-striped table-hover table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:unnamed-chunk-15">Table 3: </span>Head data from wheatdata
+<span id="tab:unnamed-chunk-16">Table 3: </span>Head data from wheatdata
 </caption>
 <thead>
 <tr>
@@ -741,16 +748,16 @@ Model.spats.2 &lt;-SpATS(response=&#39;yield&#39;,
 </ul>
 <div class="tab-content">
 <div id="home" class="tab-pane fade in active">
-<img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-20-1.png" width="672" />
-</div>
-<div id="menu1" class="tab-pane fade">
 <img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-21-1.png" width="672" />
 </div>
-<div id="spat1" class="tab-pane fade">
+<div id="menu1" class="tab-pane fade">
 <img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-22-1.png" width="672" />
 </div>
-<div id="spat2" class="tab-pane fade">
+<div id="spat1" class="tab-pane fade">
 <img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-23-1.png" width="672" />
+</div>
+<div id="spat2" class="tab-pane fade">
+<img src="/post/2019-06-14-spatial-model-vs-alpha-lattice-design_files/figure-html/unnamed-chunk-24-1.png" width="672" />
 </div>
 </div>
 <p>La tabla a continuación muestra la comparación de ambas metodologías, en cuanto al criterio de información de akaike (AIC), el R cuadrado, la varianza residual del modelo y finalmente la heredabilidad.</p>
