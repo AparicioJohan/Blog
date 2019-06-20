@@ -211,10 +211,10 @@ plot.spatial.asreml(fit.asreml,Datos,res = "YdHa",gen = "line")
 </div>
 
 
-Las correlaciones vendrían dadas por:
+Las correlaciones entre los BLUPs de los modelos propuestos vendrían dadas por:
 
 
-```{r, echo=FALSE, warning=FALSE, fig.align='center',fig.width=4,fig.height=3, message=FALSE, fig.cap="Matriz with correlations"}
+```{r, echo=FALSE, warning=FALSE, fig.align='center',fig.width=4,fig.height=3, message=FALSE, fig.cap="Correlations Matriz "}
 source("https://raw.githubusercontent.com/darizasu/work/master/scripts/ggCor.R")
 library(ggplot2)
 library(psych)
@@ -229,6 +229,13 @@ ggCor(t.b,colours = c("#db4437","white","#4285f4"))
 ```
 
 
+Algunos de los códigos que no se presentaron aquí, se pueden encontrar en el GitHub:
+
+* <https://github.com/AparicioJohan/SpATS.plus>
+
+* <https://github.com/AparicioJohan/lme4.plus>
+
+* <https://github.com/AparicioJohan/asreml.plus>
 
 ## Ejemplo con datos de trigo
 
