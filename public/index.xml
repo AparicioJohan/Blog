@@ -28,7 +28,9 @@
       <guid>/post/guide-mr-bean/</guid>
       <description>div { text-align: justify; text-justify: inter-word; }  
  
-Mr.Bean  Is a web application for simplifying the analysis of large-scale plant breeding experiments using spatial analysis , as implemented in the R-package SpATS . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models (MLM) with or without spatial correction, retrieve  BLUPs/BLUEs and heritabilites from single-environment trials. Mr. Bean also provides a module for comparing multiple sources data (e.</description>
+ 
+URL: https://beanteam.shinyapps.io/MrBean/
+Mr.Bean  Is a web application for simplifying the analysis of large-scale plant breeding experiments using spatial analysis , as implemented in the R-package SpATS . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models (MLM) with or without spatial correction, retrieve  BLUPs/BLUEs and heritabilites from single-environment trials.</description>
     </item>
     
     <item>
@@ -50,12 +52,12 @@ Mr.Bean  Is a web application for simplifying the analysis of large-scale plant 
     </item>
     
     <item>
-      <title>Biothecnology</title>
+      <title>Technology</title>
       <link>/post/readme/</link>
       <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/readme/</guid>
-      <description> Team Final </description>
+      <description> Smart &amp;amp; embedded solutions using IoT </description>
     </item>
     
     <item>
@@ -74,15 +76,15 @@ Mr.Bean  Is a web application for simplifying the analysis of large-scale plant 
       
       <guid>/top/about/</guid>
       <description>Team 
-  Stephen Beebe  Bean Program Leader       Bodo Raatz  Bean Breeder       Gloria Mosquera  Plant Pathologist        Milan Urban  Bean Physiologist         Jaumer Ricaurte  Research Associate       Juan Bueno  Research Associate       Cesar Cajiao  Research Associate       Miguel Grajales  Research Assistant        Juan Cantor  Research Assistant       Wilson Diaz  Research Assistant       Harold Diaz  Technician      Victoria Arredondo  Research Assistant        Hector Buendia  Research Assistant       Carolina Lozano  Administrative Assistant       Elisabeth Portilla  Research Assistant       Alberto Guerrero  Systems Analyst       Sergio Cruz  Visiting Researcher        Johan Aparicio  Research Assistant       Lucy Diaz  Research Assistant       Eliana Macea  Research Assistant        Maria Gómez  Research Associate       Marcela Millán  Administrative Analyst       Ernesto Espitia  Research Assistant       Daniel Ariza  Research Assistant</description>
+  Stephen Beebe  Bean Program Leader       Bodo Raatz  Bean Breeder RG        Gloria Mosquera  Plant Pathologist        Milan Urban  Bean Physiologist RG         Jaumer Ricaurte  Research Associate RG        Juan Bueno  Research Associate       Cesar Cajiao  Research Associate       Miguel Grajales  Research Assistant        Juan Cantor  Research Assistant       Wilson Diaz  Research Assistant       Harold Diaz  Technician      Victoria Arredondo  Research Assistant        Hector Buendia  Research Assistant       Carolina Lozano  Administrative Assistant       Elisabeth Portilla  Research Assistant       Alberto Guerrero  Systems Analyst       Sergio Cruz  Visiting Researcher        Johan Aparicio  Research Assistant       Lucy Diaz  Research Assistant       Eliana Macea  Research Assistant        Maria Gómez  Research Associate       Marcela Millán  Administrative Analyst       Ernesto Espitia  Research Assistant       Daniel Ariza  Research Assistant  RG</description>
     </item>
     
     <item>
       <title></title>
-      <link>/top/books/</link>
+      <link>/top/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/top/books/</guid>
+      <guid>/top/publications/</guid>
       <description></description>
     </item>
     

@@ -324,7 +324,7 @@ fit.asreml&lt;- asreml( fixed = YdHa ~  1 +   lin(col) ,
                              rcov    = ~ ar1(col_f):ar1(row_f), 
                              maxiter = 100, 
                              trace = FALSE, na.method.X = &quot;include&quot;, na.method.Y = &quot;include&quot;)</code></pre>
-<p>Como medidas de comparación se hará uso de los criterio de información (AIC, BIC), la varianza residual del modelo, el r<sup>2</sup> y finalmente la heredabilidad.</p>
+<p>Como medidas de comparación se hará uso de los criterio de información (AIC, BIC), el r<sup>2</sup>, la heredabilidad y finalmente la desviación estándar (SD) residual de los modelos.</p>
 <table class="table table-hover table-responsive table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:unnamed-chunk-9">Table 2: </span>Summary comparison
@@ -454,7 +454,7 @@ ASreml
 </tr>
 </tbody>
 </table>
-<p>La <strong>tabla 2</strong> muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r<sup>2</sup> y la Heredabilidad aumentaron aproximadamente en un <strong>42%</strong> y <strong>23%</strong>, respectivamente, y la desviación estándar residual logró reducirse de <strong>358.73</strong> a <strong>225.38</strong>.</p>
+<p>La <strong>tabla 2</strong> muestra cómo bajo todos los criterios se obtienen mejores resultados en los modelos espaciales. El AIC y el BIC fueron más bajos en <code>SpATS</code>, el r<sup>2</sup> y la Heredabilidad aumentaron aproximadamente en un <strong>42%</strong> y <strong>23%</strong>, respectivamente, y la desviación estándar residual logró reducirse considerablemente en los dos últimos modelos. Cabe resaltar que la desviación estándar residual de <code>ASReml</code>, que se muestra en la <strong>tabla 2</strong> se encuentra sin el efecto nugget que tuvo una SD de 213.09.</p>
 <p>Finalmente, de manera gráfica miraremos qué sucede espacialmente cuando se ajusta cada uno de los diseños, finalizando con la matriz de correlaciones de los efectos genéticos entre modelos.</p>
 <ul class="nav nav-tabs">
 <li class="active">

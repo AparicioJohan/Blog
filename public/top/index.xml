@@ -17,15 +17,15 @@
       
       <guid>/top/about/</guid>
       <description>Team 
-  Stephen Beebe  Bean Program Leader       Bodo Raatz  Bean Breeder       Gloria Mosquera  Plant Pathologist        Milan Urban  Bean Physiologist         Jaumer Ricaurte  Research Associate       Juan Bueno  Research Associate       Cesar Cajiao  Research Associate       Miguel Grajales  Research Assistant        Juan Cantor  Research Assistant       Wilson Diaz  Research Assistant       Harold Diaz  Technician      Victoria Arredondo  Research Assistant        Hector Buendia  Research Assistant       Carolina Lozano  Administrative Assistant       Elisabeth Portilla  Research Assistant       Alberto Guerrero  Systems Analyst       Sergio Cruz  Visiting Researcher        Johan Aparicio  Research Assistant       Lucy Diaz  Research Assistant       Eliana Macea  Research Assistant        Maria Gómez  Research Associate       Marcela Millán  Administrative Analyst       Ernesto Espitia  Research Assistant       Daniel Ariza  Research Assistant</description>
+  Stephen Beebe  Bean Program Leader       Bodo Raatz  Bean Breeder RG        Gloria Mosquera  Plant Pathologist        Milan Urban  Bean Physiologist RG         Jaumer Ricaurte  Research Associate RG        Juan Bueno  Research Associate       Cesar Cajiao  Research Associate       Miguel Grajales  Research Assistant        Juan Cantor  Research Assistant       Wilson Diaz  Research Assistant       Harold Diaz  Technician      Victoria Arredondo  Research Assistant        Hector Buendia  Research Assistant       Carolina Lozano  Administrative Assistant       Elisabeth Portilla  Research Assistant       Alberto Guerrero  Systems Analyst       Sergio Cruz  Visiting Researcher        Johan Aparicio  Research Assistant       Lucy Diaz  Research Assistant       Eliana Macea  Research Assistant        Maria Gómez  Research Associate       Marcela Millán  Administrative Analyst       Ernesto Espitia  Research Assistant       Daniel Ariza  Research Assistant  RG</description>
     </item>
     
     <item>
       <title></title>
-      <link>/top/books/</link>
+      <link>/top/publications/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/top/books/</guid>
+      <guid>/top/publications/</guid>
       <description></description>
     </item>
     

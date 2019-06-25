@@ -136,7 +136,7 @@ fit.asreml<- asreml( fixed = YdHa ~  1 +   lin(col) ,
 
 
 
-Como medidas de comparación se hará uso de los criterio de información (AIC, BIC), la varianza residual del modelo, el r^2^ y finalmente la heredabilidad.
+Como medidas de comparación se hará uso de los criterio de información (AIC, BIC), el r^2^, la heredabilidad  y finalmente la desviación estándar (SD) residual de los modelos.
 
 ```{r, echo=FALSE}
 aic    <- c(AIC(g.ran),AIC(g.ran2),AIC(g.ran3),AIC(Modelo),infoCriteria.asreml(fit.asreml)[["AIC"]])
@@ -171,7 +171,7 @@ d.sum %>%
 
 ```
 
-La **tabla 2** muestra cómo en todos los criterios se obtienen mejores resultados en el modelo espacial. El AIC y el BIC fueron más bajos en SpATS, el r^2^ y la Heredabilidad aumentaron aproximadamente en un **42%** y **23%**, respectivamente, y la desviación estándar residual logró reducirse de **358.73** a **225.38**.
+La **tabla 2** muestra cómo bajo todos los criterios se obtienen mejores resultados en los modelos espaciales. El AIC y el BIC fueron más bajos en `SpATS`, el r^2^ y la Heredabilidad aumentaron aproximadamente en un **42%** y **23%**, respectivamente, y la desviación estándar residual logró reducirse considerablemente en los dos últimos modelos. Cabe resaltar que la desviación estándar residual de `ASReml`, que se muestra en la **tabla 2** se encuentra sin el efecto nugget que tuvo una SD de 213.09.
 
 Finalmente, de manera gráfica miraremos qué sucede espacialmente cuando se ajusta cada uno de los diseños, finalizando con la matriz de correlaciones de los efectos genéticos entre modelos.
 

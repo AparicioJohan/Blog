@@ -32,7 +32,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/Bodo2.jpg" style="width:80%"/>
    </div>
     <center> <font size=5> <b>Bodo Raatz</b> </font> <br>
-  <font color="grey">Bean Breeder </font>  </center>
+  <font color="grey">Bean Breeder  <br> <a href="https://www.researchgate.net/profile/Bodo_Raatz"> <b>R<sup>G</sup></b> </a>  </font>  </center> 
   </div>
 </div>
 <!--  Gloria  -->
@@ -52,7 +52,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/mn.jpg" style="width:80%"/>
    </div>
     <center> <font size=5> <b>Milan Urban</b> </font> <br>
-  <font color="grey"> Bean Physiologist  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
+  <font color="grey"> Bean Physiologist  <br> <a href="https://www.researchgate.net/profile/Milan_Urban2"> <b>R<sup>G</sup></b> </a>  </font>  </center> 
   </div>
 </div>
 </div>
@@ -69,7 +69,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/man.png" style="width:80%"/>
     </div>
       <center> <font size=5> <b>Jaumer Ricaurte</b> </font> <br>
-    <font color="grey">Research Associate </font>  </center>  
+    <font color="grey">Research Associate <br> <a href="https://www.researchgate.net/profile/Jaumer_Ricaurte"> <b>R<sup>G</sup></b> </a>  </font>  </center> 
     </div>
    </div>
 
@@ -210,7 +210,7 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/sergio.png" style="width:80%"/>
     </div>
     <center> <font size=5> <b>Sergio Cruz</b> </font> <br>
-  <font color="grey">Visiting Researcher  <br> <a href="#"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
+  <font color="grey">Visiting Researcher  <br> <a href="https://co.linkedin.com/in/sergio-cruz-aa8413142"><i class="fa fa-linkedin"></i></a>  </font>  </center> 
   </div>
 </div>
 <!--  Johan  -->
@@ -287,7 +287,11 @@
     <img class="profile-user-img img-fluid img-circle" src="/img/Daniel.jpg" style="width:80%"/>
     </div>
      <center> <font size=5> <b>Daniel Ariza</b> </font> <br> 
-   <font color="grey">Research Assistant</font>  </center>
+   <font color="grey">Research Assistant <br> 
+    <a href="https://co.linkedin.com/in/daniel-ariza-suarez"><i class="fa fa-linkedin"></i></a>  
+    <a href="https://www.researchgate.net/profile/Daniel_Ariza-Suarez"> <b>R<sup>G</sup></b> </a> 
+    </font>  
+    </center> 
   </div>
 </div>
 </div>

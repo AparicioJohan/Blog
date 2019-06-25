@@ -28,7 +28,9 @@
       <guid>/post/guide-mr-bean/</guid>
       <description>div { text-align: justify; text-justify: inter-word; }  
  
-Mr.Bean  Is a web application for simplifying the analysis of large-scale plant breeding experiments using spatial analysis , as implemented in the R-package SpATS . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models (MLM) with or without spatial correction, retrieve  BLUPs/BLUEs and heritabilites from single-environment trials. Mr. Bean also provides a module for comparing multiple sources data (e.</description>
+ 
+URL: https://beanteam.shinyapps.io/MrBean/
+Mr.Bean  Is a web application for simplifying the analysis of large-scale plant breeding experiments using spatial analysis , as implemented in the R-package SpATS . It provides the possibility for visualizing raw data, indentifying outliers, fitting mixed linear models (MLM) with or without spatial correction, retrieve  BLUPs/BLUEs and heritabilites from single-environment trials.</description>
     </item>
     
     <item>

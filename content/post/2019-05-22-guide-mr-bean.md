@@ -25,6 +25,12 @@ div {
 
 <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa fa-arrow-up"></i> </button>
 
+<center>
+ <img src="/img/interfaz.png" alt="interface"> 
+</center>
+
+
+**URL:** https://beanteam.shinyapps.io/MrBean/
 
 # Mr.Bean
 

@@ -81,11 +81,11 @@ home = ["HTML", "RSS", "Algolia"]
   href =  "https://ciat.cgiar.org/"
   [[params.bookmark_link]]
   title =  "MrBean"
-  href =  "https://apariciojohan.shinyapps.io/Mrbean/"
+  href =  "https://beanteam.shinyapps.io/Mrbean/"
   
   [[params.addtional_menus]]
-  title =  "BOOKS"
-  href =  "/top/books/"
+  title =  "Publications"
+  href =  "/top/publications/"
   [[params.addtional_menus]]
   title =  "ABOUT"
   href =  "/top/about/"
