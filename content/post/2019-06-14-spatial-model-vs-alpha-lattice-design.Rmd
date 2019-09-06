@@ -51,7 +51,7 @@ Una duda que podría surgirnos en el momento de analizar nuestros ensayos de cam
 
 ## Ejemplo con datos de fríjol
 
-Como ejemplo se tomarán datos de **Darien** en el añó 2016 bajo condiciones de **sequía**. En este se evaluaron un total de **380** lineas en dos repeticiones, con 18 bloques incompletos dentro de cada una.
+Como ejemplo se tomarán datos de **Darien** en el añó 2016 bajo condiciones de **alto fósforo**. En este se evaluaron un total de **380** lineas en dos repeticiones, con 18 bloques incompletos dentro de cada repetición
 
 
 ```{r,message=FALSE,echo=FALSE,warning=FALSE}
@@ -71,7 +71,7 @@ Datos <- Datos[,c("YdHa","rep","block","col","row","line","PLHA","col_f","row_f"
 rownames(Datos) <- 1:nrow(Datos)
 
 head(Datos) %>%
-  kable(align = "c",caption = "Head data from Dar16C_drt") %>% 
+  kable(align = "c",caption = "Head data from Dar16C_hiP") %>% 
   kable_styling(bootstrap_options = c("striped", "hover","responsive","condensed"), full_width = F)
 ```
 
